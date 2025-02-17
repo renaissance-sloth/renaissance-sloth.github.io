@@ -1,0 +1,14 @@
+{%- assign A=include.arr -%}
+{%- assign B=include.start -%}
+{%- assign C=include.end -%}
+{%- assign D=C | minus: B -%}
+
+{%- if B == nil and C == nil -%}
+    {%- assign return=A -%}
+{%- elsif B == nil -%}
+    {%- assign return=A | slice: 0, C -%}
+{%- elsif C == nil -%}
+    {%- assign return=A | slice: B, A.size -%}
+{%- else -%}
+    {%- assign return=A | slice: B, D -%}
+{%- endif -%}

@@ -1,0 +1,13 @@
+{%- assign corrected_categories="" | split: "," -%}
+{%- for category in include.categories -%}
+    {%- assign is_category=true -%}
+    {%- for lang in site.data.snippets.languages -%}
+        {%- if category == lang[0] -%}
+            {%- assign is_category=false -%}
+            {%- break -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- if is_category -%}
+        {%- assign corrected_categories=corrected_categories | push: category -%}
+    {%- endif -%}
+{%- endfor -%}

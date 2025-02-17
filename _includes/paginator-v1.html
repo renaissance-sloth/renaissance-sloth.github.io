@@ -1,0 +1,93 @@
+{% if paginator.total_pages > 1 %}
+
+{% assign posts=site.posts | where:"language", page.language %}
+{% assign page = paginator.page %}
+{% assign per_page = paginator.per_page %}
+{% assign total_posts = posts.size %}
+{% if per_page > 0 %}
+  {% assign total_pages = total_posts | divided_by: per_page | plus: 1 %}
+{% else %}
+  {% assign total_pages = 0 %}
+{% endif %}
+{% assign previous_page = paginator.previous_page %}
+{% assign previous_page_path = paginator.previous_page_path %}
+{% if total_pages == page %}
+  {% assign next_page = nil %}
+  {% assign next_page_path = nil %}
+{% else %}
+  {% assign next_page = paginator.next_page %}
+  {% assign next_page_path = paginator.next_page_path %}
+{% endif %}
+
+{% if total_pages > 1 %}
+
+<nav class="pagination">
+  {% assign paginate_path_last = site.paginate_path | split: '/' | last %}
+  {% assign first_page_path = first_page_path | default: site.paginate_path | replace: paginate_path_last, '' | replace: '//', '/' | relative_url %}
+  <ul>
+    {% comment %} Link for previous page {% endcomment %}
+    {% if previous_page %}
+      {% if previous_page == 1 %}
+        <li><a href="{{ first_page_path }}">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
+      {% else %}
+        <li><a href="{{ site.paginate_path | replace: ':num', previous_page | replace: '//', '/' | relative_url }}">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
+      {% endif %}
+    {% else %}
+    <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</span></a></li>
+    {% endif %}
+
+    {% comment %} First page {% endcomment %}
+    {% if page == 1 %}
+      <li><a href="#" class="disabled current">1</a></li>
+    {% else %}
+      <li><a href="{{ first_page_path }}">1</a></li>
+    {% endif %}
+
+    {% assign page_start = 2 %}
+    {% if page > 4 %}
+      {% assign page_start = page | minus: 2 %}
+      {% comment %} Ellipsis for truncated links {% endcomment %}
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    {% endif %}
+
+    {% assign page_end = total_pages | minus: 1 %}
+    {% assign pages_to_end = total_pages | minus: page %}
+    {% if pages_to_end > 4 %}
+      {% assign page_end = page | plus: 2 %}
+    {% endif %}
+
+    {% for index in (page_start..page_end) %}
+      {% if index == page %}
+        <li><a href="{{ site.paginate_path | replace: ':num', index | replace: '//', '/' | relative_url }}" class="disabled current">{{ index }}</a></li>
+      {% else %}
+        {% comment %} Distance from current page and this link {% endcomment %}
+        {% assign dist = page | minus: index %}
+        {% if dist < 0 %}
+          {% comment %} Distance must be a positive value {% endcomment %}
+          {% assign dist = 0 | minus: dist %}
+        {% endif %}
+        <li><a href="{{ site.paginate_path | replace: ':num', index | relative_url }}">{{ index }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Ellipsis for truncated links {% endcomment %}
+    {% if pages_to_end > 3 %}
+      <li><a href="#" class="disabled">&hellip;</a></li>
+    {% endif %}
+
+    {% if page == total_pages %}
+      <li><a href="#" class="disabled current">{{ page }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | replace: ':num', total_pages | replace: '//', '/' | relative_url }}">{{ total_pages }}</a></li>
+    {% endif %}
+
+    {% comment %} Link next page {% endcomment %}
+    {% if next_page %}
+      <li><a href="{{ site.paginate_path | replace: ':num', next_page | replace: '//', '/' | relative_url }}">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</a></li>
+    {% else %}
+      <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</span></a></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+{% endif %}

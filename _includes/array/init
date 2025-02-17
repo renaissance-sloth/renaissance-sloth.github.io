@@ -1,0 +1,4 @@
+{%- assign A=include.arr | default: "" -%}
+{%- assign B=include.seperator | default:"," -%}
+
+{%- assign return=A | split: B -%}

@@ -1,0 +1,19 @@
+{%- assign A="" | split: "," -%}
+{%- assign B=include.start -%}
+{%- assign C=include.end -%}
+{%- assign D=include.step | default: 1 -%}
+
+{%- assign return="" | split: "," -%}
+{%- if C==nil -%}
+    {%- for E in (0..B) -%}
+        {%- assign return=return | push: E -%}
+    {%- endfor -%}
+{%- else -%}
+    {%- unless D==0 -%}
+        {%- assign F=C | minus: B | divided_by: D -%}
+        {%- for E in (0..F) -%}
+            {%- assign G=E | times: D | plus: B -%}
+            {%- assign return=return | push: G -%}
+        {%- endfor -%}
+    {%- endunless -%}
+{%- endif -%}

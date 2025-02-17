@@ -1,0 +1,10 @@
+<ul>
+    {% for language in site.data.snippets.languages %}
+        {% unless language[1].slug == page.language %}
+            <li {% if language[1].slug == page.language %}class="current"{% endif %}>
+                <a href="{{ page.url | replace: page.language, language[1].slug | absolute_url }}">{{ language[1].value }}</a>
+            </li>
+        {% endunless %}
+    {% endfor %}
+</ul>
+  
