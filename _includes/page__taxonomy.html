@@ -2,6 +2,8 @@
   {% include tag-list.html %}
 {% endif %}
 
+{% include corrected_page_categories categories=page.categories %}
+
 {% if site.category_archive.type and page.categories[0] %}
   {% include category-list.html %}
 {% endif %}

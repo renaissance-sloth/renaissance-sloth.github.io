@@ -3,6 +3,11 @@
 # English (default)
 # -----------------
 en: &DEFAULT_EN
+
+  title                      : "Renaissance sloth"
+  subtitle                   : "A record of learning and trial and error"
+  bio                        : "Let's enjoy the process of growing through trial and error together!"
+
   skip_links                 : "Skip links"
   skip_primary_nav           : "Skip to primary navigation"
   skip_content               : "Skip to content"
@@ -594,6 +599,11 @@ ne-NP:
 # Korean
 # ------
 ko: &DEFAULT_KO
+
+  title                      : "르네상스 나무늘보"
+  subtitle                   : "배움과 시행착오의 기록"
+  bio                        : "시행착오를 겪으며 성장하는 과정, 같이 즐겨봐요!"
+
   skip_links                 :
   skip_primary_nav           :
   skip_content               :
@@ -617,7 +627,7 @@ ko: &DEFAULT_KO
   comments_label             : "댓글남기기"
   comments_title             : "댓글"
   more_label                 : "더 보기"
-  related_label              : "참고"
+  related_label              : "관련 글"
   follow_label               : "팔로우:"
   feed_label                 : "피드"
   powered_by                 : "Powered by"

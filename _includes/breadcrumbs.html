@@ -16,7 +16,7 @@
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
     {% assign i = 1 %}
-    {% for crumb in crumbs offset: 1 %}
+    {% for crumb in crumbs offset: 2 %}
       {% if forloop.first %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <a href="{{ '/' | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[page.language].breadcrumb_home_label | default: "Home" }}</span></a>

@@ -1,0 +1,13 @@
+{%- assign A=include.arr -%}
+{%- assign B=include.index -%}
+{%- assign C=include.value -%}
+
+{%- assign D=A | slice: 0, B -%}
+{%- assign E=A | slice: B, A.size -%}
+{%- assign E=E | slice: 1, A.size -%}
+
+{%- if C==nil -%}
+    {%- assign return=D | concat: E -%}
+{%- else -%}
+    {%- assign return=D | push: C | concat: E -%}
+{%- endif -%}

@@ -1,0 +1,40 @@
+{%- assign array=include.arr -%}
+{%- assign score=include.score | default: array -%}
+{%- assign reverse=include.reverse | default: false -%}
+
+{%- if array.size == score.size -%}
+  {%- assign n=score.size | minus: 1 -%}
+  {%- for end in (1..n) -%}
+    {%- assign i=end -%}
+
+    {%- for j in (0..n) -%}
+      {%- assign i_1=i | minus: 1 -%}
+      {%- assign diff=score[i_1] | minus: score[i] -%}
+
+      {%- unless i>0 and diff>=0 -%}
+        {%- break -%}
+      {%- endunless -%}
+      
+      {%- assign temp1=array[i] -%}
+      {%- assign temp2=array[i_1] -%}
+      {%- include array/edit arr=array index=i value=temp2 -%}
+      {%- include array/edit arr=return index=i_1 value=temp1 -%}
+      {%- assign array=return -%}
+
+      {%- assign temp1=score[i] -%}
+      {%- assign temp2=score[i_1] -%}
+      {%- include array/edit arr=score index=i value=temp2 -%}
+      {%- include array/edit arr=return index=i_1 value=temp1 -%}
+      {%- assign score=return -%}
+
+      {%- assign i=i_1 -%}
+
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if reverse -%}
+  {%- assign return=array | reverse -%}
+{%- else -%}
+  {%- assign return=array -%}
+{%- endif -%}

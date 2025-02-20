@@ -1,11 +1,12 @@
 <!-- begin _includes/seo.html -->
 {%- assign title_separator = site.title_separator | default: '-' -%}
+{%- assign title = site.data.ui-text[page.language].title | default: site.title -%}
 
-{%- assign page_title = page.title | default: site.title | replace: '|', '&#124;' -%}
-{%- if page_title contains site.title -%}
+{%- assign page_title = page.title | default: title | replace: '|', '&#124;' -%}
+{%- if page_title contains title -%}
   {%- assign seo_title = page_title | replace: '|', '&#124;' -%}
 {%- else -%}
-  {%- assign seo_title = page_title | append: " " | append: title_separator | append: " " | append: site.title | replace: '|', '&#124;' -%}
+  {%- assign seo_title = page_title | append: " " | append: title_separator | append: " " | append: title | replace: '|', '&#124;' -%}
 {%- endif -%}
 
 {%- assign page_title = page_title | markdownify | strip_html | strip_newlines | escape_once -%}
@@ -47,7 +48,7 @@
 
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:locale" content="{{ page.language | replace: "-", "_" | default: "en_US" }}">
-<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:site_name" content="{{ title }}">
 <meta property="og:title" content="{{ page_title }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
