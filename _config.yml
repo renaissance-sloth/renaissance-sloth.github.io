@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Sloth"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/img/author_100x100.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Let's enjoy the process of growing through trial and error together!"
   location         : "Gwangju, South Korea"
   email            : "slothrant@gmail.com"
