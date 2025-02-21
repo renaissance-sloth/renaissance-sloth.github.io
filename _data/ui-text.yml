@@ -7,6 +7,8 @@ en: &DEFAULT_EN
   title                      : "Renaissance Sloth"
   subtitle                   : "A record of learning and trial and error"
   bio                        : "Let's enjoy the process of growing through trial and error together!"
+  author                     : "Sloth"
+  understand                 : "There may be inaccurate or incomplete information, so please point it out in the comments."
 
   skip_links                 : "Skip links"
   skip_primary_nav           : "Skip to primary navigation"
@@ -603,6 +605,8 @@ ko: &DEFAULT_KO
   title                      : "르네상스 나무늘보"
   subtitle                   : "배움과 시행착오의 기록"
   bio                        : "시행착오를 겪으며 성장하는 과정, 같이 즐겨봐요!"
+  author                     : "나무늘보"
+  understand                 : "어설프거나 틀린 내용이 있을 수 있으니 댓글로 지적해주시면 감사하겠습니다."
 
   skip_links                 :
   skip_primary_nav           :
