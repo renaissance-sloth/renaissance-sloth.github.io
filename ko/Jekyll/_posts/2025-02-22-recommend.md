@@ -9,8 +9,8 @@ header:
 # 참고하면 좋은 사이트
 
 ## Liquid 필터 문법
-- [jekyll Liquid 필터](https://jekyllrb-ko.github.io/docs/liquid/filters/)
-- [shopify 표준 Liquid 필터](https://shopify.github.io/liquid/)
+- [jekyll Liquid 필터](https://jekyllrb-ko.github.io/docs/liquid/filters/){: target="_blank"}
+- [shopify 표준 Liquid 필터](https://shopify.github.io/liquid/){: target="_blank"}
 
 ## 달라진 코드 찾기
-- [텍스트 문서 비교 사이트](https://wepplication.github.io/tools/compareDoc/)
+- [텍스트 문서 비교 사이트](https://wepplication.github.io/tools/compareDoc/){: target="_blank"}
