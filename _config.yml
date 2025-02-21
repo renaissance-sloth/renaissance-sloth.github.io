@@ -124,7 +124,7 @@ author:
       # url: "mailto:slothrant@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://renaissance-sloth.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -136,7 +136,13 @@ author:
       url: "https://github.com/renaissance-sloth"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/renaissance_sloth"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/renaissance-sloth-b925b4352/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-square"
+      url: "https://www.youtube.com/@Renaissance-Sloth"
 
 # Site Footer
 footer:
@@ -158,7 +164,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://www.instagram.com/renaissance_sloth"
 
 
 # Reading Files
