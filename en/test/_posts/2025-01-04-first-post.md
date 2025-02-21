@@ -1,11 +1,12 @@
 ---
-title: "sixth post"
+title: "First post"
+excerpt: 
 tags: post
 header:
   teaser: 
 ---
 
-I'm writing the 6th post.
+I'm writing the first post.
 
 ## Sub-topic 1
 

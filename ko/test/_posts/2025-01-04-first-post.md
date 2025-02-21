@@ -1,5 +1,6 @@
 ---
 title: "첫번째 포스트"
+excerpt: 
 tags: 포스트
 header:
   teaser: 

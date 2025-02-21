@@ -1,5 +1,6 @@
 ---
 title: "블로그 플랫폼 비교 분석"
+excerpt: 
 tags: platform comparison analyze WordPress 워드프레스 Blogger 블로거 블로그스팟 Notion 노션 Velog 벨로그 Tistory 티스토리 Medium 미디엄 Github 깃허브
 header:
   teaser: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
