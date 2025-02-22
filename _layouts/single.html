@@ -48,6 +48,7 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+        {{ site.data.ui-text[page.language].understand | default: "" }}<br><br>
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[page.language].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

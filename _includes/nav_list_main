@@ -1,0 +1,24 @@
+{% assign sum = site.posts | where:"language", page.language | size %}
+
+<nav class="nav__list">
+    <input id="ac-toc" name="accordion-toc" type="checkbox" />
+    <label for="ac-toc">{{ site.data.ui-text[page.language].menu_label }}</label>
+    <ul class="nav__items" id="category_tag_menu">
+        <li>
+            <span class="label">📂 {{site.data.ui-text[page.language].total_posts}} ({{sum}})</span>
+        </li>
+        
+        <li>
+            {% include corrected_site_categories %}
+            {% for category in corrected_categories %}
+            <span class="nav__sub-title">{{ category[0] }} ({{category[1].size}})</span>
+            <ul>
+                {% for post in category[1] %}
+                {% if post.language != page.language %}{% continue %}{% endif %}
+                <li><a href="{{ post.url }}" class="">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </li>
+    </ul>
+</nav>

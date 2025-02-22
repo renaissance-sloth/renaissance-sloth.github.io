@@ -8,6 +8,17 @@
         {%- endif -%}
     {%- endfor -%}
     {%- if is_category -%}
-        {%- assign corrected_categories=corrected_categories | push: category -%}
+        {%- assign corrected_category="" | split: "," -%}
+        {%- assign category_list="" | split: "," -%}
+        {%- assign corrected_category=corrected_category | push: category[0] -%}
+        {%- for post in category[1] -%}
+            {%- if post.language == page.language -%}
+                {%- assign category_list=category_list | push: post -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- if category_list.size > 0 -%}
+            {%- assign corrected_category=corrected_category | push: category_list -%}
+            {%- assign corrected_categories=corrected_categories | push: corrected_category -%}
+        {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
