@@ -1,5 +1,5 @@
 ---
-title: "Jekyll 블로그 운영하며 참고하면 좋은 사이트"
+title: "참고하면 좋은 사이트"
 excerpt: 
 tags: Github 깃허브 Jekyll 지킬 추천 사이트 liquid
 header:
