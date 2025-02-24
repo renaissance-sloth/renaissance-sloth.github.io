@@ -7,9 +7,9 @@
 
 {% if page.collection != 'posts' %}
   {% assign path_type = nil %}
-  {% assign crumb_path = '/' %}
+  {% assign crumb_path = '/' | append: page.language %}
 {% else %}
-  {% assign crumb_path = site.category_archive.path %}
+  {% assign crumb_path = site.category_archive.path | prepend: page.language %}
 {% endif %}
 
 <nav class="breadcrumbs">
@@ -19,7 +19,7 @@
     {% for crumb in crumbs offset: 2 %}
       {% if forloop.first %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ '/' | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[page.language].breadcrumb_home_label | default: "Home" }}</span></a>
+          <a href="{{ '/' | append: page.language | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[page.language].breadcrumb_home_label | default: "Home" }}</span></a>
 
           <meta itemprop="position" content="{{ i }}" />
         </li>
