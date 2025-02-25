@@ -19,4 +19,4 @@ console.log('hello world!');
 
 The title of this document is '{{ page.title }}'
 
-![text](https://picsum.photos/200)
+![text](/assets/favicon.ico/android-icon-192x192.png)
