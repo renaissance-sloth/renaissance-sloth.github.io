@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : "A record of learning and trial and error" # site tagline that appears below site title in masthead
 name                     : "Jeong-gyuKim" #"Your Name"
 description              : "A technology blog focused on development, learning, and personal growth." #"An amazing website."
-url                      : "https://renaissance-sloth.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://renaissance-sloth.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "renaissance-sloth/renaissance-sloth.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/favicon.ico/android-icon-192x192.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
