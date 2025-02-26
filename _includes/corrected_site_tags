@@ -1,0 +1,15 @@
+{%- assign corrected_tags="" | split: "," -%}
+{%- for tag in site.tags -%}
+    {%- assign corrected_tag="" | split: "," -%}
+    {%- assign tag_list="" | split: "," -%}
+    {%- assign corrected_tag=corrected_tag | push: tag[0] -%}
+    {%- for post in tag[1] -%}
+        {%- if post.language == page.language -%}
+            {%- assign tag_list=tag_list | push: post -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- if tag_list.size > 0 -%}
+        {%- assign corrected_tag=corrected_tag | push: tag_list -%}
+        {%- assign corrected_tags=corrected_tags | push: corrected_tag -%}
+    {%- endif -%}
+{%- endfor -%}
