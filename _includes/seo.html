@@ -101,6 +101,29 @@
   {% endif %}
 {% endif %}
 
+{% assign x_default_set = false %}
+{% for language in site.data.snippets.languages %}
+  {% if page.url == '/' %}
+    {% unless x_default_set %}
+      <link rel="alternate" hreflang="x-default" href="{{ page.url | append: site.locale | absolute_url }}">
+      {% assign x_default_set = true %}
+    {% endunless %}
+    <link rel="alternate" hreflang="{{ language[0] }}" href="{{ page.url | append: language[1].slug | absolute_url }}">
+  {% else %}
+    {% assign translated_url = page.url | replace: page.language, language[1].slug %}
+    {% assign pages_posts = site.pages | concat: site.posts %}
+    {% for page_post in pages_posts %}
+        {% if page_post.url == translated_url %}
+          {% unless x_default_set %}
+            <link rel="alternate" hreflang="x-default" href="{{ page.url | replace: page.language, language[1].slug | absolute_url }}">
+            {% assign x_default_set = true %}
+          {% endunless %}
+          <link rel="alternate" hreflang="{{ language[0] }}" href="{{ page.url | replace: page.language, language[1].slug | absolute_url }}">
+        {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
 <link rel="canonical" href="{{ canonical_url }}">
 
 {% if paginator.previous_page %}
