@@ -6,17 +6,45 @@ layout: archive
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[page.language].recent_posts | default: "Recent Posts" }}</h3>
 
-{% if paginator %}
-  <!-- {% assign posts = paginator.posts %} -->
-  {% assign first_post_num=paginator.page | times: paginator.per_page | minus: paginator.per_page %}
-  {% assign posts=site.posts | where:"language", page.language | slice: first_post_num, paginator.per_page %}
-{% else %}
-  {% assign posts = site.posts | where:"language", page.language %}
-{% endif %}
+{% assign posts=site.posts | where:"language", page.language %}
+{% assign page = 1 %}
+{% assign per_page = site.paginate %}
+{% assign total_posts = posts.size %}
+{% assign total_pages = total_posts | divided_by: per_page | plus: 1 %}
+
+<style>
+.page-content {
+  display: none;
+}
+
+{% for i in (1..total_pages) %}
+#page{{i}}:checked ~ .page{{i}} {
+  display: block;
+}
+{% endfor %}
+
+input[type="radio"] {
+  display: none;
+}
+</style>
+
+{% for i in (1..total_pages) %}
+<input type="radio" name="page" id="page{{i}}" {% if i == 1 %}checked{% endif %}>
+{% endfor %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
+{% for i in (1..total_pages) %}
+<div class="page-content page{{i}}">
+  {% assign first_post_num = i | times: per_page | minus: per_page %}
+  {% assign post_i = posts | slice: first_post_num, per_page %}
+  <div class="entries-{{ entries_layout }}">
+    {% include documents-collection.html entries=post_i type=entries_layout %}
+  </div>
 </div>
+{% endfor %}
 
-{% include paginator.html %}
+<nav>
+  {% for i in (1..total_pages) %}
+  <label for="page{{i}}">{{i}}</label>
+  {% endfor %}
+</nav>
