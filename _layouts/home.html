@@ -10,7 +10,7 @@ layout: archive
 {% assign page = 1 %}
 {% assign per_page = site.paginate %}
 {% assign total_posts = posts.size %}
-{% assign total_pages = total_posts | divided_by: per_page | plus: 1 %}
+{% assign total_pages = total_posts | times: 1.0 | divided_by: per_page | ceil %}
 
 <style>
 .page-content {
