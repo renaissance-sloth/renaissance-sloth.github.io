@@ -1,7 +1,7 @@
 ---
 title: "참고하면 좋은 사이트"
 excerpt: 
-tags: Github 깃허브 Jekyll 지킬 추천 사이트 liquid
+tags: Github Jekyll liquid
 header:
   teaser: https://cdn.shopify.com/shopifycloud/brochure/assets/brand-assets/shopify-logo-primary-logo-456baa801ee66a0a435671082365958316831c9960c480451dd0330bcdae304f.svg
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Git 브랜치 삭제하기"
 excerpt: 
-tags: Github 깃허브 Git 깃 branch 브랜치 
+tags: Github Git branch 
 header:
   teaser: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
 ---
