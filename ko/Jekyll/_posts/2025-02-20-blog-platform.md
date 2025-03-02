@@ -1,7 +1,7 @@
 ---
 title: "블로그 플랫폼 비교 분석"
 excerpt: 
-tags: platform comparison analyze WordPress Blogger Notion Velog Tistory Medium Github
+tags: platform comparison analyze Github
 header:
   teaser: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
 ---
