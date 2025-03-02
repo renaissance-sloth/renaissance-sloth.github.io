@@ -13,9 +13,7 @@ layout: default
   {% assign breadcrumbs_enabled = page.breadcrumbs %}
 {% endif %}
 {% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+  {% include breadcrumbs.html %}
 {% endif %}
 
 <div id="main" role="main">
