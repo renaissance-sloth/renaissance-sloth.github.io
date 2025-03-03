@@ -1,0 +1,32 @@
+<div style="margin-top: 975px;">
+    <div>
+        <div>
+            <strong>
+                <span>시리즈</span>
+            </strong>
+        </div>
+        <div>
+            {{page.header.series}}
+        </div>
+    </div>
+    <div>
+        <ul>
+            {% assign posts = site.posts | where:"language", page.language %}
+            {% assign index = 0 %}
+            {% for post in posts %}
+            {% assign index = index | plus: 1 %}
+            <li>
+                <a href="{{post.url | relative_url}}">
+                    <span>{{index}}</span>
+                    <span>{{post.title}}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="#">
+            <span>전체 목차 보기</span>
+        </a>
+    </div>
+</div>
