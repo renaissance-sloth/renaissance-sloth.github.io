@@ -9,52 +9,52 @@ sitemap:
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         
-    {% for page in site.pages %}
-    {% if page.sitemap.exclude != true %}
+    {%- for page in site.pages -%}
+    {%- if page.sitemap.exclude != true -%}
     <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
-        {% if page.lastmod == null %}
+        {%- if page.lastmod == null -%}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        {% else %}
+        {%- else -%}
         <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
-        {% endif %}
+        {%- endif -%}
 
-        {% if page.sitemap.changefreq == null %}
+        {%- if page.sitemap.changefreq == null -%}
         <changefreq>daily</changefreq>
-        {% else %}
+        {%- else -%}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-        {% endif %}
+        {%- endif -%}
 
-        {% if page.sitemap.priority == null %}
+        {%- if page.sitemap.priority == null -%}
         <priority>0.8</priority>
-        {% else %}
+        {%- else -%}
         <priority>{{ page.sitemap.priority }}</priority>
-        {% endif %}
+        {%- endif -%}
     </url>
-    {% endif %}
-    {% endfor %}
+    {%- endif -%}
+    {%- endfor -%}
 
-    {% for post in site.posts %}
+    {%- for post in site.posts -%}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
-        {% if post.lastmod == null %}
+        {%- if post.lastmod == null -%}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% else %}
+        {%- else -%}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-        {% endif %}
+        {%- endif -%}
 
-        {% if post.sitemap.changefreq == null %}
+        {%- if post.sitemap.changefreq == null -%}
         <changefreq>weekly</changefreq>
-        {% else %}
+        {%- else -%}
         <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-        {% endif %}
+        {%- endif -%}
 
-        {% if post.sitemap.priority == null %}
+        {%- if post.sitemap.priority == null -%}
         <priority>0.5</priority>
-        {% else %}
+        {%- else -%}
         <priority>{{ post.sitemap.priority }}</priority>
-        {% endif %}
+        {%- endif -%}
 
     </url>
-    {% endfor %}
+    {%- endfor -%}
 </urlset>
