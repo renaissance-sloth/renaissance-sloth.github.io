@@ -12,11 +12,21 @@
     <div>
         <ul>
             {% assign posts = site.posts | where:"language", page.language %}
-            {% assign index = 0 %}
+            {% assign series = "" | split:"," %}
             {% for post in posts %}
+                {% if post.header.series == page.header.series %}
+                    {% assign series = series | push: post %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign index = 0 %}
+            {% for post in series reversed %}
             {% assign index = index | plus: 1 %}
             <li>
                 <a href="{{post.url | relative_url}}">
+                    {% if post == page %}
+                        <span>current</span>
+                    {% endif %}
                     <span>{{index}}</span>
                     <span>{{post.title}}</span>
                 </a>
