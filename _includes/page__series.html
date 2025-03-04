@@ -1,16 +1,37 @@
+<style>
+    /* Hide the toggle checkbox */
+    #expand-toggle {
+    display: none;
+    }
+
+    /* Hide expandable content by default */
+    .expandable {
+    visibility: collapse;
+    }
+
+    /* Style the button */
+    #expand-btn {
+    display: inline-block;
+    }
+
+    /* Show hidden content when the checkbox is checked */
+    #expand-toggle:checked ~ * .expandable {
+    visibility: visible;
+    }
+</style>
+
 <div style="margin-top: 975px;">
-    <div>
-        <div>
-            <strong>
-                <span>시리즈</span>
-            </strong>
-        </div>
-        <div>
-            {{page.header.series}}
-        </div>
-    </div>
-    <div>
-        <ul>
+    <input type="checkbox" id="expand-toggle" />
+
+    <strong>시리즈</strong>
+    <table>
+        <thead>
+            <tr>
+            <th>{{page.header.series}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            
             {% assign posts = site.posts | where:"language", page.language %}
             {% assign series = "" | split:"," %}
             {% for post in posts %}
@@ -22,21 +43,21 @@
             {% assign index = 0 %}
             {% for post in series reversed %}
             {% assign index = index | plus: 1 %}
-            <li>
-                <a href="{{post.url | relative_url}}">
-                    {% if post == page %}
-                        <span>current</span>
-                    {% endif %}
-                    <span>{{index}}</span>
-                    <span>{{post.title}}</span>
-                </a>
-            </li>
+            {% if post == page %}
+            <tr>
+            {% else %}
+            <tr class="expandable">
+            {% endif %}
+                <td>
+                    <a href="{{post.url | relative_url}}">
+                        <span>{{index}}</span>
+                        <span>{{post.title}}</span>
+                    </a>
+                </td>
+            </tr>
             {% endfor %}
-        </ul>
-    </div>
-    <div>
-        <a href="#">
-            <span>전체 목차 보기</span>
-        </a>
-    </div>
+        </tbody>
+    </table>
+
+    <label for="expand-toggle" id="expand-btn">전체 목차 보기</label>
 </div>
