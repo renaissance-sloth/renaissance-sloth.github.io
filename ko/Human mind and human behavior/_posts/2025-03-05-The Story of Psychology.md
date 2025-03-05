@@ -1,7 +1,7 @@
 ---
 title: "심리학이란 무엇인가?"
 excerpt: "서막 - 심리학 이야기"
-tags: syllabus psychology human mind behavior
+tags: psychology human mind behavior
 header:
   teaser: https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail-product-api/A00077021/100209435/111776127/main/9791162263631_L.jpg
 ---

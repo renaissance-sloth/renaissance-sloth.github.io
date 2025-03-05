@@ -1,7 +1,7 @@
 ---
 title: "The Wave Function"
 excerpt: "The Wave Function"
-tags: syllabus physics quantum
+tags: physics quantum
 header:
   teaser: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQqoGDngbpKU_7jpFv4thAwH03rpQ8HZk7VXCkdFrS0IHbkrjgE
 ---
