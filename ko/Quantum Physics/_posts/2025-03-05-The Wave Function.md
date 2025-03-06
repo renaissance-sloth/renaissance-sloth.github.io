@@ -32,7 +32,7 @@ $E \rightarrow i\hbar\frac{\partial}{\partial t}$
 
 $\vec{p}\rightarrow -i\hbar\vec{\nabla}$, $ p^{2} \rightarrow -\hbar^{2} \nabla^{2} $
 
-$ \vec{r}=\vec{r} $
+$ \vec{r}\rightarrow\vec{r} $
 
 고전적인 보존 시스템에 대한 관계식 $ E=\frac{p^{2}}{2m}+V $에 적용하여 $ i\hbar\frac{\partial}{\partial t}\Psi=\left( -\frac{\hbar^{2}}{2m}\nabla^{2}+V \right)\Psi $를 얻을 수 있습니다.
 
