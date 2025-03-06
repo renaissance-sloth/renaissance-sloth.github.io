@@ -78,3 +78,12 @@ $\arccos$, $\arcsin$, $\arctan$, $\arg$, $\cos$, $\cosh$, $\cot$, $\coth$, $\csc
 \limsup $\rightarrow\limsup$
 
 /TODO()
+
+## 이진 연산/관계 기호
+## 화살표 기호
+## 기타 기호
+## 수학 모드 악센트
+## 배열 환경, 예
+## 기타 스타일(수학 모드만 해당)
+## 글꼴 크기
+## 텍스트 모드: 악센트 및 기호
