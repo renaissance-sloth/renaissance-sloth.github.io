@@ -373,10 +373,11 @@ Like this
 * To break a line, you must leave more than 3 spaces at the end of the sentence.   
 Like this
 
-****
+---
+
 # 3. Markdown Usage
-## 3.1. WSYWIG Editor
-Most of the editors we commonly use on the web (Naver, Daum, Google, etc.) are WSYWIG editors, and basically use HTML to apply styles and decorate sentences. Therefore, when you copy and paste the contents of the View area of ​​a Markdown editor such as Harupad, they are generally copied as they appear in the View area. However, there is a problem when you try to edit the sentences after pasting, because the tags containing the style are transformed during the editing process and affect the overall effect. It is not easy on Tistory blogs... In the case of WordPress, it is recommended to utilize the function that converts posts written in Markdown to HTML.
+## 3.1. WYSIWYG Editor
+Most of the editors we commonly use on the web (Naver, Daum, Google, etc.) are WYSIWYG editors, and basically use HTML to apply styles and decorate sentences. Therefore, when you copy and paste the contents of the View area of ​​a Markdown editor such as Harupad, they are generally copied as they appear in the View area. However, there is a problem when you try to edit the sentences after pasting, because the tags containing the style are transformed during the editing process and affect the overall effect. It is not easy on Tistory blogs... In the case of WordPress, it is recommended to utilize the function that converts posts written in Markdown to HTML.
 The conclusion is, **If you copy and paste, it is better not to edit the main text if possible.**
 
 ## 3.2. Github, Bitbucket, Yobi, etc.
