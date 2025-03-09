@@ -1,6 +1,6 @@
 ---
 title: "플라즈마 물리학을 소개합니다."
-excerpt: 
+excerpt: 우주의 1% 만이 우리가 아는 물질이고, 그 중 99%는 플라즈마 상태이다.
 tags: physics plasma intro
 header:
   teaser: https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZplqQsfMnOSyYRjjzr6zXYM-zkt-rm1oeXLK_GKncRFjhT2_n
@@ -29,7 +29,7 @@ $ \frac{n_{i}}{n_{n}} \approx 2.4\times10^{21}\frac{T^{3/2}}{n_{i}}e^{-U_{i}/KT}
 
 이때, $n_{i}$는 이온화된 원자의 밀도($m^{3}$당 개수), $n_{n}$은 중성 원자의 밀도($m^{3}$당 개수), $T$는 온도(K), $K$는 볼츠만 상수(약 $1.380\times10^{−23} J/K$), $U_{i}$는 이온화 에너지($J$)다.
 
-대기에 대해 계산해보자면, $n_{n}=3\times10^{25}m^{-3}, T=300K, U_{i}=14.5eV, \frac{n_{i}}{n_{n}＋n_{i}} \approx \frac{n_{i}}{n_{n}}$로 식에 의해 예상되는 값은 $\frac{n_{i}}{n_{n}} \approx 10^{-122}$이다.
+대기에 대해 계산해보자면, $n_{n}=3\times10^{25}m^{-3}$, $T=300K$, $U_{i}=14.5eV$, $\frac{n_{i}}{n_{n}＋n_{i}} \approx \frac{n_{i}}{n_{n}}$로 식에 의해 예상되는 값은 $\frac{n_{i}}{n_{n}} \approx 10^{-122}$이다.
 
 온도가 충분히 올라 $KT$가 이온화 에너지 $U_{i}$와 비슷해지면 플라즈마가 된다. 이것이 플라즈마가 고온의 천체에는 있지만, 지구에는 없는 이유다.
 
@@ -59,12 +59,88 @@ Saha 방정식에 담긴 물리적 의미를 알아보자.
 
 열 평형 상태의 기체는 모든 속도의 입자를 가지고 있고, 이 속도는 맥스웰 분포를 따를 확률이 많이 높다. 
 
+### 1차원 맥스웰 분포
 단순하게 입자가 직선 위에서(1차원 상에서)만 움직인다고 해보자. 강한 자기장은 실제로 전자가 자기장 선을 따라서만 움직이도록 할 수 있다. 
 
-1차원 맥스웰 분포는 $f(u)=A exp\left( -\frac{1}{2}mu^{2}/KT \right)$이다. 이때, $f du$는 단위 부피당 속도가 $u$에서 $u+du$ 사이인 입자의 수, $\frac{1}{2}mu^{2}$은 운동 에너지, $K$는 볼츠만 상수이다. $k$는 파동의 전파 상수로 사용할 것이기 때문에 볼츠만 상수에는 대문자를 사용할 것이다. 
+1차원 맥스웰 분포는 $f(u)=A \exp\left( -\frac{1}{2}mu^{2}/KT \right)$이다. 이때, $f du$는 단위 부피당 속도가 $u$에서 $u+du$ 사이인 입자의 수, $\frac{1}{2}mu^{2}$은 운동 에너지, $K$는 볼츠만 상수이다. $k$는 파동의 전파 상수로 사용할 것이기 때문에 볼츠만 상수에는 대문자를 사용할 것이다. 
 
 밀도 $n$(단위 부피당 입자 수, $m^{-3}$)은 모든 속도의 입자 수와 같기 때문에 $n=\int_{-\infty}^{\infty} {f(u)du}$로 주어지고, $A=n\left(\frac{m}{2\pi KT}\right)^{1/2}$으로 계산할 수 있다. 
 
-> $n$ $=\int_{-\infty}^{\infty} {f(u)du}$ $=\int_{-\infty}^{\infty} {A exp\left( -\frac{1}{2}mu^{2}/KT \right)} du$ $=A\int_{-\infty}^{\infty} {exp\left( -\frac{m}{2KT} u^{2}\right)} du$ $=A\sqrt{2\pi \int_{0}^{\infty} r{ exp\left( -\frac{m}{2KT} r^{2}\right)} dr}$ $=A\sqrt{2\pi \int_{0}^{\infty} \frac{d}{dr} \left(-\frac{KT}{m} exp\left( -\frac{m}{2KT} r^{2}\right)\right) dr}$ $=A\sqrt{2\pi \left[-\frac{KT}{m} exp\left( -\frac{m}{2KT} r^{2}\right)\right]_{0}^{\infty}}$ $=A\sqrt{2\pi \left(0 - -\frac{KT}{m}\right)} $
+---
+<details>
+<summary>$A$ 계산하는 방법</summary>
+
+$n$ 
+$=\int_{-\infty}^{\infty} {f(u)du}$ 
+$=\int_{-\infty}^{\infty} {A \exp\left( -\frac{1}{2}mu^{2}/KT \right)} du$ 
+$=A\int_{-\infty}^{\infty} {\exp\left( -\frac{m}{2KT} u^{2}\right)} du$ 
+$=A\sqrt{2\pi \int_{0}^{\infty} r{ \exp\left( -\frac{m}{2KT} r^{2}\right)} dr}$ 
+$=A\sqrt{2\pi \int_{0}^{\infty} \frac{d}{dr} \left(-\frac{KT}{m} \exp\left( -\frac{m}{2KT} r^{2}\right)\right) dr}$ 
+$=A\sqrt{2\pi \left[-\frac{KT}{m} \exp\left( -\frac{m}{2KT} r^{2}\right)\right]_{0}^{\infty}}$ 
+$=A\sqrt{2\pi \left(0 - -\frac{KT}{m}\right)}$ 
+$=A\sqrt{\frac{2\pi KT}{m}}$
+
+$\therefore A$ $=n\sqrt{\frac{m}{2\pi KT}}$ $=n\sqrt{\frac{m}{2\pi KT}}$ $=n\left(\frac{m}{2\pi KT}\right)^{1/2}$
+</details>
+---
+
+분포의 폭은 상수 $T$로 특징될 수 있고, 이를 온도라 한다.
+
+$T$의 정확한 의미를 파악하기 위해 입자의 평균 운동 에너지를 계산해보겠다.
+
+$E_{av}=\frac{\int_{-\infty}^{\infty} {\frac{1}{2}mu^{2} f(u)}du}{\int_{-\infty}^{\infty} {f(u)}du}$
+
+편하게 보기 위해 다음과 같이 정의하겠다.
+
+$v_{th}=(2KT/m)^{1/2}$, $y=u/v_{th}$
+
+정의한 기호를 통해 1차원 맥스웰 분포를 표현하면 
+$f(u)=A \exp(-u^{2}/v_{th}^{2})$ 
+이고, 평균 운동 에너지는 
+$E_{av}$ $=\frac{\frac{1}{2}m A v_{th}^{3}\int_{-\infty}^{\infty} {\left[\exp(-y^{2})\right]y^{2}}dy}{A v_{th}\int_{-\infty}^{\infty} {\exp(-y^{2})}dy}$ 이다.
+
+<details>
+<summary>평균 운동 에너지를 간단하게 계산해보자.</summary>
+<p></p>
+<p>우선 분자의 $\int_{-\infty}^{\infty} {y^{2}\left[\exp(-y^{2})\right]}dy$ 부분을 먼저 계산할 수 있다.</p>
+
+<p>부분적분 하면</p>
+
+<p>$\int_{-\infty}^{\infty} {y^{2}\left[\exp(-y^{2})\right]}dy$
+$= \int_{-\infty}^{\infty} {y \cdot \left[\exp(-y^{2})\right]y}dy$</p>
+
+<p>이고, $\left[y \cdot -\frac{1}{2}\left[\exp(-y^{2})\right]\right]_{-\infty}^{\infty}=0$이기에 </p>
+
+<p>$=-\int_{-\infty}^{\infty} {-\frac{1}{2}\exp \left(-y^{2}\right)} dy$
+$=\frac{1}{2}\int_{-\infty}^{\infty} {\exp \left(-y^{2}\right)} dy$이다.</p>
+
+<p>이제 평균 운동 에너지 식에 대입하여 적분 부분을 약분하면,</p>
+
+<p>$E_{av}$ 
+$=\frac{\frac{1}{2}m A v_{th}^{3}\int_{-\infty}^{\infty} {\left[\exp(-y^{2})\right]y^{2}}dy}{A v_{th}\int_{-\infty}^{\infty} {\exp(-y^{2})}dy}$
+$=\frac{\frac{1}{2}m A v_{th}^{3}\frac{1}{2}\int_{-\infty}^{\infty} {\exp \left(-y^{2}\right)} dy}{A v_{th}\int_{-\infty}^{\infty} {\exp(-y^{2})}dy}$
+$=\frac{\frac{1}{2}m A v_{th}^{3}\frac{1}{2}}{A v_{th}}$
+$=\frac{1}{4}m v_{th}^{2}$이다.</p>
+
+<p>$v_{th}=(2KT/m)^{1/2}$로 정의하였기 때문에 </p>
+
+<p>$\frac{1}{2}m v_{th}^{2}=KT$로 계산할 수 있다.</p>
+</details>
+
+결과로 $E_{av}=\frac{1}{2}KT$를 얻을 수 있다.
+
+### 3차원 맥스웰 분포
+1차원에서의 결과만 있다면 3차원으로 확장하는 것은 어렵지 않다.
+
+맥스웰 분포는 이제
+$f(u,v,w)$$=A_{3}\exp\left[ -\frac{1}{2}m\left( u^{2}+v^{2}+w^{2} \right)/KT \right]$
+가 되었다.
+
+이때, $A_{3}=n\left(\frac{m}{2\pi KT}\right)^{3/2}$이다.
+
+평균 운동 에너지는
+$E_{av}$
+$=\frac{\iiint_{-\infty}^{\infty} {A_{3}\frac{1}{2}m \left( u^{2}+v^{2}+w^{2} \right) e^{-\frac{1}{2}m\left( u^{2}+v^{2}+w^{2} \right)/KT}} du dv dw}{\iiint_{-\infty}^{\infty} {A_{3}e^{-\frac{1}{2}m\left( u^{2}+v^{2}+w^{2} \right)/KT}} du dv dw}$
+이다.
 
 /TODO()
