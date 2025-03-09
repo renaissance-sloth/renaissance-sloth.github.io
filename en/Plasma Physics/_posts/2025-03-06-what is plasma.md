@@ -1,5 +1,5 @@
 ---
-title: "Introducing Plasma Physics."
+title: "Introducing Plasma Physics"
 excerpt: Only 1% of the universe is matter we know, and 99% of that is in a plasma state.
 tags: physics plasma intro
 header:

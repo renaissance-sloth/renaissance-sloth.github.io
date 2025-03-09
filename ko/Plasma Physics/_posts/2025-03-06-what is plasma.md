@@ -1,5 +1,5 @@
 ---
-title: "플라즈마 물리학을 소개합니다."
+title: "플라즈마 물리학 소개"
 excerpt: 우주의 1% 만이 우리가 아는 물질이고, 그 중 99%는 플라즈마 상태이다.
 tags: physics plasma intro
 header:
