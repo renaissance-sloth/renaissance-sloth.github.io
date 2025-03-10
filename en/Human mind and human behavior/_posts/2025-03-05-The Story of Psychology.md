@@ -21,14 +21,3 @@ teaser: https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/reta
     - Humility
         - That was unexpected! Let's explore more.
         > Researchers must be willing to marvel at new ideas and pursue them. People and animals do not behave as certain ideas and beliefs predict.
-
-## Thinking Critically: The Scientific Attitude
-/TODO()
-
-## The Birth of Psychological Science
-
-## The Maturity of Psychological Science
-
-## Psychology Today
-
-## Becoming a Healthier Person/Better Student through Psychology

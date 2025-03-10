@@ -91,11 +91,3 @@ Average: $\left<j\right>=\sum_{j=0}^{\infty}jP(j)$
 Average/expectation value of a function $f$ of $j$: $ \left<f(j)\right>=\sum_{j=0}^{\infty}f(j)P(j) $
 
 Variance(Standard deviation): $ \sigma\equiv\sqrt{\left<(j-\left<j\right>)^{2}\right>} = \sqrt{\left<j^{2}\right>-\left<j\right>^{2}} $
-
-/TODO()
-
-## Normalization
-
-## Momentum
-
-## The Uncertainty Principle

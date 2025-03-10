@@ -171,5 +171,3 @@ In the presence of a magnetic field **B**, even the same ions can have different
 High temperature does not necessarily mean a lot of heat. In the case of fluorescent lamps, the internal electron temperature is about $20,000^{\circ}K$, but the electron density is much lower than the atmospheric pressure, so the heat capacity is not large. Therefore, the total amount of heat transferred is small despite the high temperature.
 
 The plasma used in the laboratory is usually hot, about $1,000,000^{\circ}K (100 eV)$, but the density is only about $10^{18}-10^{19}$ per $m^{3}$, so there is no need to worry about the wall containing the plasma getting hot.
-
-/TODO()
