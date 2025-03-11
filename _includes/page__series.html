@@ -20,10 +20,10 @@
     }
 </style>
 
-<div style="margin-top: 975px;">
+<div style="margin-top: 900px;">
     <input type="checkbox" id="expand-toggle" />
 
-    <strong>시리즈</strong>
+    <strong>연재</strong>
     <table>
         <thead>
             <tr>
@@ -39,7 +39,16 @@
                     {% assign series = series | push: post %}
                 {% endif %}
             {% endfor %}
-
+            
+            {% assign index = 0 %}
+            {% for post in series reversed %}
+                {% assign index = index | plus: 1 %}
+                {% if post == page %}
+                    {% assign now = index %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            
             {% assign index = 0 %}
             {% for post in series reversed %}
             {% assign index = index | plus: 1 %}
