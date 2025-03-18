@@ -153,8 +153,10 @@ $ \frac{\partial \Psi^{\*}}{\partial t}\Psi$ $= \frac{\hbar}{2mi} \frac{\partial
 ---
 
 $\frac{\partial \Psi^{\*}}{\partial t}\Psi+\Psi^{\*}\frac{\partial \Psi}{\partial t}$
+
 $= \frac{\hbar}{2mi} \frac{\partial^{2}\Psi^{\*}}{\partial x^{2}} \Psi - \frac{\hbar}{2mi} \Psi^{\*}\frac{\partial^{2}\Psi}{\partial x^{2}} $
 $ - \frac{1}{i\hbar}V\Psi^{\*}\Psi + \frac{1}{i\hbar}V\Psi^{\*}\Psi $
+
 $= - \frac{\hbar}{2mi} (\Psi^{\*}\frac{\partial^{2}\Psi}{\partial x^{2}} - \frac{\partial^{2}\Psi^{\*}}{\partial x^{2}} \Psi)$
 $= - \frac{\hbar}{2mi} \frac{\partial}{\partial x} (\Psi^{\*}\frac{\partial\Psi}{\partial x} - \frac{\partial\Psi^{\*}}{\partial x} \Psi)$
 로 얻을 수 있고,
@@ -167,3 +169,23 @@ $=0$
 으로, 
 
 전체 확률은 시간에 무관하게 상수이고, 정규화가 되었다면 전체 확률은 1로 보존된다.
+
+---
+
+### 연속방정식
+
+$\frac{\partial}{\partial t} \left&#124; \Psi (x,t) \right&#124;^{2}$
+$= - \frac{\hbar}{2mi} \frac{\partial}{\partial x} (\Psi^{\*}\frac{\partial\Psi}{\partial x} - \frac{\partial\Psi^{\*}}{\partial x} \Psi)$
+을 3차원에서 살펴보자. $\frac{\partial}{\partial x}\to\nabla$ 로만 바꾸면 된다.
+
+결과는
+$\frac{\partial}{\partial t} \left&#124; \Psi (x,t) \right&#124;^{2}$
+$= - \frac{\hbar}{2mi} \nabla \cdot (\Psi^{\*}\nabla\Psi - (\nabla\Psi^{\*}) \Psi)$
+로 나타난다.
+
+이때, $\left&#124; \Psi (x,t) \right&#124;^{2}$ $= \rho$, $\frac{\hbar}{2mi} (\Psi^{\*}\nabla\Psi - (\nabla\Psi^{\*}) \Psi)$ $= \vec{j}$로 정의하자.
+
+$\frac{\partial\rho}{\partial t} + \nabla\cdot\vec{j}=0$
+를 얻을 수 있고, 이는 연속방정식이다.
+
+확률 밀도가 보존된다는 의미이다.
