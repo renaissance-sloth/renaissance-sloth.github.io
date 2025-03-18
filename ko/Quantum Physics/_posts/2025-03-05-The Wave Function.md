@@ -189,3 +189,60 @@ $\frac{\partial\rho}{\partial t} + \nabla\cdot\vec{j}=0$
 를 얻을 수 있고, 이는 연속방정식이다.
 
 확률 밀도가 보존된다는 의미이다.
+
+## 운동량
+
+위치의 기댓값은 다음과 같이 표현한다.
+
+$\langle x\rangle$
+$=\int_{-\infty}^{\infty}  x\left&#124; \Psi (x,t) \right&#124;^{2}dx$
+$= \int_{-\infty}^{\infty}  \Psi^{\*}(x,t)x\Psi(x,t)dx$
+
+위치의 기댓값을 시간에 대해 미분해보자.
+
+$\frac{d}{dt} \langle x\rangle$
+$= \int_{-\infty}^{\infty} x \frac{\partial}{\partial t} \left&#124; \Psi (x,t) \right&#124;^{2}dx$
+$= - \frac{\hbar}{2mi} \int_{-\infty}^{\infty} x \frac{\partial}{\partial x} (\Psi^{\*}\frac{\partial\Psi}{\partial x} - \frac{\partial\Psi^{\*}}{\partial x} \Psi)dx$
+
+$= \- \frac{\hbar}{2mi} ( [x (\Psi^{\*}\frac{\partial\Psi}{\partial x} \- \frac{\partial\Psi^{\*}}{\partial x} \Psi)]\_{\-\infty}^{\infty} $ 
+$\- \int\_{\-\infty}^{\infty} (\Psi^{\*}\frac{\partial\Psi}{\partial x} \- \frac{\partial\Psi^{\*}}{\partial x} \Psi)dx )$
+$= \frac{\hbar}{2mi}\int\_{\-\infty}^{\infty} (\Psi^{\*}\frac{\partial\Psi}{\partial x} \- \frac{\partial\Psi^{\*}}{\partial x} \Psi)dx$
+$= \cdots$
+$= \int\_{\-\infty}^{\infty} \Psi^{\*}\frac{\hbar}{mi}\frac{\partial}{\partial x} \Psi dx$
+$= \int\_{\-\infty}^{\infty} \Psi^{\*}\frac{p}{m}\Psi dx$
+$\equiv \langle v_{x} \rangle $
+$= \int\_{\-\infty}^{\infty} \Psi^{\*}v_{x}\Psi dx$
+
+따라서 
+$p=\frac{\hbar}{i}\frac{\partial}{\partial x}$, 
+$v=\frac{p}{m}$
+으로 정의하는 것이 합당하다.
+
+### 에렌페스트 정리(Ehrenfest theorem)
+뉴턴의 고전 역학에서 운동량을 시간에 대해 미분하면 무엇인지 알고 있는가?
+
+$$ \frac{dp}{dt} = -\frac{\partial V}{\partial x} $$
+
+운동량을 시간에 대해 미분하면 힘을 얻을 수 있다.
+
+이와 같이 운동량 기댓값의 시간에 대한 미분을 구해보자.
+
+$\cdots$
+<!-- \TODO 계산 과정 작성 -->
+
+결과로 $ \frac{d\langle p\rangle}{dt} = \langle -\frac{\partial V}{\partial x}\rangle $를 얻을 수 있다.
+
+## 불확정성 원리
+### 드 브로이의 공식
+입자가 파장 $\lambda$의 이동하는 파동이라 할때, 운동량의 크기는
+$p=\frac{h}{\lambda}=\hbar k$, $k=\frac{2\pi}{\lambda} $
+로 나타난다.
+
+$\lambda$를 점차 많이 더할 경우 위치는 선명하게 결정되지만, 운동량은 흐트러지게 된다. 
+
+이를 식으로 나타내면 
+$ \sigma_{x}\sigma_{p} \geq \frac{\hbar}{2} $
+로 나타나고, 동시에 $x$와 $p$를 이보다 더 정확하게 측정하는 것은 물리적으로 불가능하다.
+
+### 일반화된 불확정성 원리
+$\sigma_{A}\sigma_{B} \geq &#124; \frac{1}{2i} \langle [A,B] \rangle &#124;$이다. 이때, $[A,B]=AB-BA$, $\sigma_{f}$는 $f$의 표준편차이다.
