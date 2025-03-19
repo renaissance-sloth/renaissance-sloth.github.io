@@ -77,8 +77,7 @@ $\arccos$, $\arcsin$, $\arctan$, $\arg$, $\cos$, $\cosh$, $\cot$, $\coth$, $\csc
 
 \limsup $\rightarrow\limsup$
 
-/TODO()
-
+<!-- /TODO()
 ## Binary Operation/Relation Symbols
 ## Arrow symbols
 ## Miscellaneous symbols
@@ -86,4 +85,4 @@ $\arccos$, $\arcsin$, $\arctan$, $\arg$, $\cos$, $\cosh$, $\cot$, $\coth$, $\csc
 ## Array environment, examples
 ## Other Styles (math mode only)
 ## Font sizes
-## Text Mode: Accents and Symbols
+## Text Mode: Accents and Symbols -->

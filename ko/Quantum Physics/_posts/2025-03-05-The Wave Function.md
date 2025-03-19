@@ -228,7 +228,7 @@ $$ \frac{dp}{dt} = -\frac{\partial V}{\partial x} $$
 이와 같이 운동량 기댓값의 시간에 대한 미분을 구해보자.
 
 $\cdots$
-<!-- \TODO 계산 과정 작성 -->
+<!-- \TODO() 계산 과정 작성 -->
 
 결과로 $ \frac{d\langle p\rangle}{dt} = \langle -\frac{\partial V}{\partial x}\rangle $를 얻을 수 있다.
 
