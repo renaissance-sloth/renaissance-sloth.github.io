@@ -303,9 +303,9 @@ Link: [Google][googlelink]
 
 ```
 Usage: [Title](link)
-Example: [Google](https://google.com, "google link")
+Example: [Google](https://google.com "google link")
 ```
-Link: [Google](https://google.com, "google link")
+Link: [Google](https://google.com "google link")
 
 * Automatic link
 
