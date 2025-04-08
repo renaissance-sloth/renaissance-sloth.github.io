@@ -11,6 +11,8 @@ sitemap:
         
     {%- for page in site.pages -%}
     {%- if page.sitemap.exclude != true -%}
+    {%- for language in site.data.snippets.languages -%}
+    {%- if page.url contains language[1].slug -%}
     <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         {%- if page.lastmod == null -%}
@@ -31,6 +33,8 @@ sitemap:
         <priority>{{ page.sitemap.priority }}</priority>
         {%- endif -%}
     </url>
+    {%- endif -%}
+    {%- endfor -%}
     {%- endif -%}
     {%- endfor -%}
 
