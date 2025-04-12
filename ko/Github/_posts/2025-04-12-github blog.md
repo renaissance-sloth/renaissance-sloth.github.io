@@ -31,11 +31,40 @@ gem install jekyll
 
 위의 그림에서 선택된 파일들은 사용하지 않는 파일들로 삭제해도 좋다.
 
+Gemfile을 열어 아래와 같이 수정한다.
+```
+source "https://rubygems.org"
+
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+# This will help ensure the proper Jekyll version is running.
+# Happy Jekylling!
+
+# gem "github-pages", group: :jekyll_plugins
+
+# To upgrade, run `bundle update`.
+
+gem "jekyll"
+gem "minimal-mistakes-jekyll"
+
+# The following plugins are automatically loaded by the theme-gem:
+#   gem "jekyll-paginate"
+#   gem "jekyll-sitemap"
+#   gem "jekyll-gist"
+#   gem "jekyll-feed"
+#   gem "jekyll-include-cache"
+#
+# If you have any other plugins, put them here!
+group :jekyll_plugins do
+#    gem "jekyll-seo-tag"  # 추가 하고 싶은 플러그인
+end
+```
+
 더욱 상세히, 많은 정보를 원한다면, <a href="https://mmistakes.github.io/minimal-mistakes/" target="_blank">mmistakes homepage</a>를 참고해보자.
-
-## 레포지토리 만들기
-
-`(본인의 깃허브 아이디).github.io`로 레포지토리를 생성하고 진행사항을 push하면 된다.
 
 ## 로컬 서버 실행
 레포지토리 폴더에서
@@ -50,6 +79,12 @@ bundle exec jekyll serve
 
 <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>에서 확인할 수 있다. 지금 상태는 **로컬**에서 열린 것으로 다른 컴퓨터에서는 볼 수 없다.
 아직 자랑하지는 말자.
+
+## 레포지토리 만들기
+
+`(본인의 깃허브 아이디).github.io`로 레포지토리를 생성하고 진행사항을 push하면 된다.
+
+빠르면 바로, 늦으면 대략 5분 정도 기다리면 레포지토리의 이름과 동일한 주소에서 홈페이지를 확인할 수 있을 것이다.
 
 ## _config.yml 편집
 
