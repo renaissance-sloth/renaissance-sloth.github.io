@@ -324,21 +324,34 @@ Link: [Google][googlelink]
 
 ```
 사용법: [제목](링크)
-예시: [Google](https://google.com, "google link")
+예시: [Google](https://google.com "google link")
 ```
-Link: [Google](https://google.com, "google link")
+Link: [Google](https://google.com "google link")
 
 * 자동 링크
 
 ```
 일반 URL 또는 이메일 주소인 경우 적절한 형식으로 링크를 형성한다.
 
-* 외부 링크: <http://example.com/>
-* 이메일 링크: <address@example.com>
+Link: <http://example.com/>
+
+Link: <address@example.com>
 ```
 
-* 외부 링크: <http://example.com/>
-* 이메일 링크: <address@example.com>
+Link: <http://example.com/>
+
+Link: <address@example.com>
+
+* 새 창에서 열기
+
+```
+위의 방법으로 만들어진 링크들을 클릭하게 되면 현재 페이지가 클릭한 페이지로 바뀐다.
+다음의 방법은 새 창에서 페이지가 열리게 할 수 있다.
+
+<a href="https://google.com" target="_blank"> Google </a>
+```
+
+Link: <a href="https://google.com" target="_blank"> Google </a>
 
 ## 2.7. 강조
 ```
