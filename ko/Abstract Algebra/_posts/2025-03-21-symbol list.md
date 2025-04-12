@@ -1,7 +1,7 @@
 ---
 title: "현대대수 기호 목록"
 excerpt: 
-tags: math mathematics abstract algebra preliminary set mapping integer induction complex
+tags: math mathematics abstract algebra symbol
 header:
   teaser: https://media.wiley.com/product_data/coverImage300/92/04713687/0471368792.jpg
 ---
