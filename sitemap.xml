@@ -11,8 +11,7 @@ sitemap:
         
     {%- for page in site.pages -%}
     {%- if page.sitemap.exclude != true -%}
-    {%- for language in site.data.snippets.languages -%}
-    {%- if page.url contains language[1].slug -%}
+    {%- if page.url contains "ko" -%}
     <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         {%- if page.lastmod == null -%}
@@ -34,11 +33,11 @@ sitemap:
         {%- endif -%}
     </url>
     {%- endif -%}
-    {%- endfor -%}
     {%- endif -%}
     {%- endfor -%}
 
     {%- for post in site.posts -%}
+    {%- if post.url contains "ko" -%}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
         {%- if post.lastmod == null -%}
@@ -60,5 +59,6 @@ sitemap:
         {%- endif -%}
 
     </url>
+    {%- endif -%}
     {%- endfor -%}
 </urlset>
