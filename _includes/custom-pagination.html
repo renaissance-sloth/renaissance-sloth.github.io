@@ -20,6 +20,27 @@ input[type="radio"] {
 }
 </style>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash) {
+      handleHash(window.location.hash);
+    }
+
+    window.addEventListener("hashchange", function () {
+      handleHash(window.location.hash);
+    });
+
+    function handleHash(hash) {
+      const targetId = hash.replace("#", "");
+      const radio = document.getElementById(targetId);
+      if (radio) {
+        radio.checked = true;
+      }
+    }
+  });
+</script>
+
 {% for page in (1..total_pages) %}
 <input type="radio" name="page" id="page{{page}}" {% if page == init_page %}checked{% endif %}>
 {% endfor %}
@@ -53,9 +74,9 @@ input[type="radio"] {
         {% comment %} Link for previous page {% endcomment %}
         {% if previous_page %}
           {% if previous_page == 1 %}
-            <li><a href="#" onclick="document.getElementById('page{{previous_page}}').click(); return false;">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
+            <li><a href="#page{{previous_page}}" aria-label="Go to page{{previous_page}}" onclick="document.getElementById('page{{previous_page}}').click();">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
           {% else %}
-            <li><a href="#" onclick="document.getElementById('page{{previous_page}}').click(); return false;">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
+            <li><a href="#page{{previous_page}}" aria-label="Go to page{{previous_page}}" onclick="document.getElementById('page{{previous_page}}').click();">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
           {% endif %}
         {% else %}
         <li><a href="#" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</span></a></li>
@@ -65,7 +86,7 @@ input[type="radio"] {
         {% if page == 1 %}
           <li><a href="#" onclick="return false;" class="disabled current">1</a></li>
         {% else %}
-          <li><a href="#" onclick="document.getElementById('page{{1}}').click(); return false;">1</a></li>
+          <li><a href="#page{{1}}" aria-label="Go to page{{1}}" onclick="document.getElementById('page{{1}}').click();">1</a></li>
         {% endif %}
 
         {% assign page_start = 2 %}
@@ -83,7 +104,7 @@ input[type="radio"] {
 
         {% for index in (page_start..page_end) %}
           {% if index == page %}
-            <li><a href="#" onclick="document.getElementById('page{{index}}').click(); return false;" class="disabled current">{{ index }}</a></li>
+            <li><a href="#page{{index}}" aria-label="Go to page{{index}}" onclick="document.getElementById('page{{index}}').click();" class="disabled current">{{ index }}</a></li>
           {% else %}
             {% comment %} Distance from current page and this link {% endcomment %}
             {% assign dist = page | minus: index %}
@@ -91,7 +112,7 @@ input[type="radio"] {
               {% comment %} Distance must be a positive value {% endcomment %}
               {% assign dist = 0 | minus: dist %}
             {% endif %}
-            <li><a href="#" onclick="document.getElementById('page{{index}}').click(); return false;">{{ index }}</a></li>
+            <li><a href="#page{{index}}" aria-label="Go to page{{index}}" onclick="document.getElementById('page{{index}}').click();">{{ index }}</a></li>
           {% endif %}
         {% endfor %}
 
@@ -103,12 +124,12 @@ input[type="radio"] {
         {% if page == total_pages %}
           <li><a href="#" onclick="return false;" class="disabled current">{{ page }}</a></li>
         {% else %}
-          <li><a href="#" onclick="document.getElementById('page{{total_pages}}').click(); return false;">{{ total_pages }}</a></li>
+          <li><a href="#page{{total_pages}}" aria-label="Go to page{{total_pages}}" onclick="document.getElementById('page{{total_pages}}').click();">{{ total_pages }}</a></li>
         {% endif %}
 
         {% comment %} Link next page {% endcomment %}
         {% if next_page %}
-          <li><a href="#" onclick="document.getElementById('page{{next_page}}').click(); return false;">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</a></li>
+          <li><a href="#page{{next_page}}" aria-label="Go to page{{next_page}}" onclick="document.getElementById('page{{next_page}}').click();">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</a></li>
         {% else %}
           <li><a href="#" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</span></a></li>
         {% endif %}
