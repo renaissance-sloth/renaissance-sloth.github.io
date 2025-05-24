@@ -79,12 +79,12 @@ input[type="radio"] {
             <li><a href="#page{{previous_page}}" aria-label="Go to page{{previous_page}}" onclick="document.getElementById('page{{previous_page}}').click();">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</a></li>
           {% endif %}
         {% else %}
-        <li><a href="#" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</span></a></li>
+        <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_previous | default: "Previous" }}</span></a></li>
         {% endif %}
 
         {% comment %} First page {% endcomment %}
         {% if page == 1 %}
-          <li><a href="#" onclick="return false;" class="disabled current">1</a></li>
+          <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled current">1</a></li>
         {% else %}
           <li><a href="#page{{1}}" aria-label="Go to page{{1}}" onclick="document.getElementById('page{{1}}').click();">1</a></li>
         {% endif %}
@@ -93,7 +93,7 @@ input[type="radio"] {
         {% if page > 4 %}
           {% assign page_start = page | minus: 2 %}
           {% comment %} Ellipsis for truncated links {% endcomment %}
-          <li><a href="#" onclick="return false;" class="disabled">&hellip;</a></li>
+          <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled">&hellip;</a></li>
         {% endif %}
 
         {% assign page_end = total_pages | minus: 1 %}
@@ -118,11 +118,11 @@ input[type="radio"] {
 
         {% comment %} Ellipsis for truncated links {% endcomment %}
         {% if pages_to_end > 3 %}
-          <li><a href="#" onclick="return false;" class="disabled">&hellip;</a></li>
+          <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled">&hellip;</a></li>
         {% endif %}
 
         {% if page == total_pages %}
-          <li><a href="#" onclick="return false;" class="disabled current">{{ page }}</a></li>
+          <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled current">{{ page }}</a></li>
         {% else %}
           <li><a href="#page{{total_pages}}" aria-label="Go to page{{total_pages}}" onclick="document.getElementById('page{{total_pages}}').click();">{{ total_pages }}</a></li>
         {% endif %}
@@ -131,7 +131,7 @@ input[type="radio"] {
         {% if next_page %}
           <li><a href="#page{{next_page}}" aria-label="Go to page{{next_page}}" onclick="document.getElementById('page{{next_page}}').click();">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</a></li>
         {% else %}
-          <li><a href="#" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</span></a></li>
+          <li><a href="#" aria-label="disabled" onclick="return false;" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[page.language].pagination_next | default: "Next" }}</span></a></li>
         {% endif %}
       </ul>
     </nav>
