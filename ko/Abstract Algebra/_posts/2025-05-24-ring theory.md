@@ -384,216 +384,6 @@ $$
 
 ---
 
-우리는 이제 **noncommutative**한 예시들을 살펴보고자 한다. 이러한 예시들은 풍부하게 존재하지만, 독자가 선형대수학에 익숙하다는 전제를 하지 않기 때문에 그리 쉽게 찾을 수는 없다. 가장 쉽고 자연스러운 출발점은 **field** 위의 행렬이다. 따라서 우리의 첫 **noncommutative** 예시는 실수 계수의 $2 \times 2$ 행렬 집합이 될 것이다.
-
----
-
-### Example 11
-
-$F$를 실수의 **field**라 하자. 그리고 $R$을 다음과 같은 모든 정사각 배열의 집합이라 하자:
-
-$$
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}, \quad \text{단 } a, b, c, d \in \mathbb{R}
-$$
-
-이러한 배열에 대해 덧셈은 자연스럽게 다음과 같이 정의된다:
-
-$$
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-+
-\begin{pmatrix}
-r & s \\
-t & u
-\end{pmatrix}
-=
-\begin{pmatrix}
-a + r & b + s \\
-c + t & d + u
-\end{pmatrix}
-$$
-
-이 연산 하에서 $R$은 덧셈에 대해 **abelian group**을 이루며, 영원소는
-
-$$
-\begin{pmatrix}
-0 & 0 \\
-0 & 0
-\end{pmatrix}
-$$
-
-이고, 음원소는 각 성분의 부호를 반대한 행렬이다.
-
-**ring** 구조를 갖추기 위해서는 곱셈 연산이 필요하다. 우리는 다음과 같이 정의한다:
-
-$$
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-\begin{pmatrix}
-r & s \\
-t & u
-\end{pmatrix}
-=
-\begin{pmatrix}
-ar + bt & as + bu \\
-cr + dt & cs + du
-\end{pmatrix}
-$$
-
-이 곱셈 연산이 다소 인위적으로 보일 수 있지만, 이 연산과 위 덧셈 연산을 함께 사용할 경우 $R$은 **noncommutative ring**이 된다. 이때,
-
-$$
-\begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix}
-$$
-
-은 단위원으로 작용한다.
-
-한 가지 흥미로운 점은 다음과 같다:
-
-$$
-\begin{pmatrix}
-1 & 1 \\
-0 & 0
-\end{pmatrix}
-\begin{pmatrix}
-1 & 1 \\
-0 & 0
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & 1 \\
-0 & 0
-\end{pmatrix}
-$$
-
-이므로 이는 자명하지 않은 원소인데도 제곱하면 0이 된다. 즉, **zero-divisor**이다.
-
-이 $R$은 실수 **field** $F$ 위의 모든 $2 \times 2$ 행렬로 구성된 **ring**이다.
-
-이러한 행렬 곱셈에 익숙하지 않은 독자를 위해, 이 곱셈이 어떻게 작동하는지 설명하자.
-
-* 곱의 왼쪽 위 항목은 A의 첫 번째 행과 B의 첫 번째 열을 "곱하여" 계산한다.
-* 오른쪽 위 항목은 A의 첫 번째 행과 B의 두 번째 열
-* 왼쪽 아래는 A의 두 번째 행과 B의 첫 번째 열
-* 오른쪽 아래는 A의 두 번째 행과 B의 두 번째 열
-
-예를 들어 다음과 같은 두 행렬을 곱해보자:
-
-$$
-A =
-\begin{pmatrix}
-1 & \pi \\
--3 & 2
-\end{pmatrix},
-\quad
-B =
-\begin{pmatrix}
-\frac{1}{2} & \frac{1}{2} \\
-1 & \pi
-\end{pmatrix}
-$$
-
-그러면
-
-* 왼쪽 위 항목: $1 \cdot \frac{1}{2} + \pi \cdot 1 = \frac{1}{2} + \pi$
-* 오른쪽 위: $1 \cdot \frac{1}{2} + \pi \cdot \pi = \frac{1}{2} + \pi^2$
-* 왼쪽 아래: $-3 \cdot \frac{1}{2} + 2 \cdot 1 = -\frac{3}{2} + 2 = \frac{1}{2}$
-* 오른쪽 아래: $-3 \cdot \frac{1}{2} + 2 \cdot \pi = -\frac{3}{2} + 2\pi$
-
-이렇게 행렬곱이 정의된다.
-
----
-
-### Example 12
-
-임의의 **ring** $R$에 대해, 다음과 같은 형태의 행렬 집합을 생각하자:
-
-$$
-S = \left\{
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix}
-\mid a, b, c, d \in R
-\right\}
-$$
-
-덧셈과 곱셈은 Example 11과 동일하게 정의한다. 이 경우에도 $S$는 **ring**이 되며, 이는 $R$ 위의 모든 $2 \times 2$ 행렬로 구성된 **ring**이다.
-
----
-
-### Example 13 — The Quaternions
-
-고전적인 예시 중 하나인 실수 **quaternion**을 보자. 이는 해밀턴이 복소수의 **noncommutative**한 확장을 목표로 1843년에 도입하였다.
-
-실수 **field** $\mathbb{R}$에 대해, 다음과 같은 형식의 기호를 가진 집합을 정의한다:
-
-$$
-a_0 + a_1 i + a_2 j + a_3 k \quad \text{단 } a_0, a_1, a_2, a_3 \in \mathbb{R}
-$$
-
-이들 사이의 등식과 덧셈은 다음과 같이 정의된다:
-
-* 등식: 두 quaternion이 같으려면, 대응하는 모든 계수가 같아야 한다.
-* 덧셈:
-
-$$
-(a_0 + a_1 i + a_2 j + a_3 k) + (b_0 + b_1 i + b_2 j + b_3 k)
-= (a_0 + b_0) + (a_1 + b_1)i + (a_2 + b_2)j + (a_3 + b_3)k
-$$
-
-이제 곱셈 규칙을 소개한다. 해밀턴은 1843년 10월 6일 더블린의 브루엄 다리(Brougham Bridge)에서 이를 발견하고 다리에 새겨넣었다. 기본 규칙은 다음과 같다:
-
-$$
-i^2 = j^2 = k^2 = -1, \quad ij = k, \quad jk = i, \quad ki = j
-$$
-
-$$
-ji = -k, \quad kj = -i, \quad ik = -j
-$$
-
-이들 규칙을 기반으로, 다음과 같이 두 quaternion의 곱을 정의한다:
-
-$$
-(a_0 + a_1 i + a_2 j + a_3 k)(b_0 + b_1 i + b_2 j + b_3 k)
-= c_0 + c_1 i + c_2 j + c_3 k
-$$
-
-여기서
-
-$$
-\begin{aligned}
-c_0 &= a_0 b_0 - a_1 b_1 - a_2 b_2 - a_3 b_3 \\
-c_1 &= a_0 b_1 + a_1 b_0 + a_2 b_3 - a_3 b_2 \\
-c_2 &= a_0 b_2 - a_1 b_3 + a_2 b_0 + a_3 b_1 \\
-c_3 &= a_0 b_3 + a_1 b_2 - a_2 b_1 + a_3 b_0
-\end{aligned}
-$$
-
-계산은 복잡해 보이지만, 이 모든 것은 분배법칙과 위의 곱셈 규칙을 반복 적용함으로써 얻어진다.
-
-만약 $x = a_0 + a_1 i + a_2 j + a_3 k \ne 0$이라면, 다음 항등식이 성립한다:
-
-$$
-x \cdot \bar{x} = a_0^2 + a_1^2 + a_2^2 + a_3^2
-$$
-
-이 값이 $\ne 0$이므로, 역원이 존재함을 보여준다. 따라서 quaternion의 집합은 단위원을 갖는 **noncommutative division ring**이다.
-
-이 **quaternion**은 종종 수학자들이 접하는 유일한 **noncommutative division ring**이기도 하다.
-
----
-
 ## 2. Some Simple Results
 
 우리는 이제 여러 **ring** 예시를 살펴보았고, 이를 직접 다뤄보기도 했다. 따라서 이제는 계산에서 자주 발생할 수 있는 번거로운 사소한 오류들을 피할 수 있도록 몇 가지 계산 규칙들을 정리하는 것이 바람직하다.
@@ -612,7 +402,7 @@ $$
 
 ### Lemma 4.2.1
 
-\*\*임의의 ring $R$, 그리고 $a, b \in R$\*\*에 대해 다음이 성립한다:
+**임의의 ring $R$, 그리고 $a, b \in R$**에 대해 다음이 성립한다:
 
 * (a) $a \cdot 0 = 0 \cdot a = 0$
 * (b) $a \cdot (-b) = (-a) \cdot b = -(ab)$
@@ -663,7 +453,7 @@ $$
 
 ### Lemma 4.2.2
 
-\*\*임의의 ring $R$, 그리고 $a, b \in R$\*\*에 대해 다음이 성립한다:
+**임의의 ring $R$, 그리고 $a, b \in R$**에 대해 다음이 성립한다:
 
 $$
 (a + b)^2 = a^2 + b^2 + ab + ba
@@ -705,7 +495,7 @@ $$
 
 ### Lemma 4.2.3
 
-\*\*단위원을 갖는 $R$\*\*가 있고, 이 $R$이 **ring**의 모든 공리를 만족하지만 **덧셈의 교환법칙** $a + b = b + a$는 보장되지 않는다고 하자. 이 경우에도 $R$은 **ring**이다. (즉, $a + b = b + a$가 성립한다.)
+**단위원을 갖는 $R$**가 있고, 이 $R$이 **ring**의 모든 공리를 만족하지만 **덧셈의 교환법칙** $a + b = b + a$는 보장되지 않는다고 하자. 이 경우에도 $R$은 **ring**이다. (즉, $a + b = b + a$가 성립한다.)
 
 **Proof.** 우리는 $a + b = b + a$임을 보여야 한다.
 
@@ -1242,3 +1032,5 @@ $$
 따라서 $(a)$는 $R$의 **ideal**이다.
 
 만약 $R$이 **commutative**하지 않다면, 위 정의의 집합은 **ideal**이 아닐 수도 있다. 그러나 최소한 **left ideal**임은 확실하다.
+
+<!-- TODO() -->
