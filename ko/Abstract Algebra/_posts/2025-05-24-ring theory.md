@@ -78,17 +78,28 @@ header:
 
 ### Examples
 
-1. 첫 번째 예시로 가장 자연스럽게 선택할 수 있는 **ring**은 정수의 집합 $\mathbb{Z}$이다. 이는 정수의 일반적인 덧셈과 곱셈 아래에서 **integral domain**의 예시가 된다.
+#### Example 1
 
-2. 두 번째 예시는 마찬가지로 자명하다. $\mathbb{Q}$를 유리수 전체의 집합이라 하자. 우리가 잘 알다시피, $\mathbb{Q}$는 **field**의 모든 공리를 만족하므로, $\mathbb{Q}$는 **field**이다.
+첫 번째 예시로 가장 자연스럽게 선택할 수 있는 **ring**은 정수의 집합 $\mathbb{Z}$이다. 이는 정수의 일반적인 덧셈과 곱셈 아래에서 **integral domain**의 예시가 된다.
 
-3. 실수 $\mathbb{R}$ 역시 **field**의 예이다.
 
-4. 복소수 $\mathbb{C}$도 역시 **field**를 이룬다.
+#### Example 2
+
+두 번째 예시는 마찬가지로 자명하다. $\mathbb{Q}$를 유리수 전체의 집합이라 하자. 우리가 잘 알다시피, $\mathbb{Q}$는 **field**의 모든 공리를 만족하므로, $\mathbb{Q}$는 **field**이다.
+
+
+#### Example 3
+실수 $\mathbb{R}$ 역시 **field**의 예이다.
+
+
+#### Example 4
+복소수 $\mathbb{C}$도 역시 **field**를 이룬다.
 
 여기서 $\mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$임을 주목하라. 우리는 이를 두고 $\mathbb{Q}$가 $\mathbb{R}$ (및 $\mathbb{C}$)의 **subfield**라고 말한다.
 
-5. $R = \mathbb{Z}_6$이라 하자. 즉, 정수의 모듈로 6 연산 아래의 집합이며, 그 덧셈과 곱셈은 다음과 같이 정의된다:
+
+#### Example 5
+$R = \mathbb{Z}_6$이라 하자. 즉, 정수의 모듈로 6 연산 아래의 집합이며, 그 덧셈과 곱셈은 다음과 같이 정의된다:
 
 $$
 [a] + [b] = [a + b], \quad [a][b] = [ab]
@@ -114,11 +125,17 @@ $$
 
 $\mathbb{Z}_6$에서 $[2]$와 $[3]$은 모두 **zero-divisor**임을 주목하라. **integral domain**이란 결국 **zero-divisor**가 존재하지 않는 **commutative ring**을 뜻한다.
 
-6. $R = \mathbb{Z}_5$라고 하자. 즉, 5를 법으로 하는 정수들의 **ring**이다. 이는 단위원을 갖는 **commutative ring**이며, 더 나아가 **field**이다. $[1], [2], [3], [4]$는 모두 0이 아닌 원소이며, $[2][3] = [6] = [1]$, 그리고 $[1]$, $[4]$는 자기 자신에 대한 역원을 가진다. 따라서 $\mathbb{Z}_5$의 모든 0이 아닌 원소가 역원을 가지므로, 이는 **field**이다.
+
+#### Example 6
+
+$R = \mathbb{Z}_5$라고 하자. 즉, 5를 법으로 하는 정수들의 **ring**이다. 이는 단위원을 갖는 **commutative ring**이며, 더 나아가 **field**이다. $[1], [2], [3], [4]$는 모두 0이 아닌 원소이며, $[2][3] = [6] = [1]$, 그리고 $[1]$, $[4]$는 자기 자신에 대한 역원을 가진다. 따라서 $\mathbb{Z}_5$의 모든 0이 아닌 원소가 역원을 가지므로, 이는 **field**이다.
 
 이를 일반화하면 다음과 같다.
 
-7. $\mathbb{Z}_p$, 즉 $p$가 소수일 때의 정수의 모듈로 $p$ **ring**을 생각하자. 이 역시 단위원을 갖는 **commutative ring**임이 자명하다. 우리는 $\mathbb{Z}_p$가 **field**임을 주장한다.
+
+#### Example 7
+
+$\mathbb{Z}_p$, 즉 $p$가 소수일 때의 정수의 모듈로 $p$ **ring**을 생각하자. 이 역시 단위원을 갖는 **commutative ring**임이 자명하다. 우리는 $\mathbb{Z}_p$가 **field**임을 주장한다.
 
 이를 보이기 위해 $[a] \ne [0]$이라고 하자. 그렇다면 $p \nmid a$이고, **Fermat's Theorem**에 의해:
 
@@ -130,11 +147,17 @@ $$
 
 이처럼 유한한 원소 개수를 가진 **field**를 **finite field**라 부른다. 우리는 나중에 $\mathbb{Z}_p$와는 다른 형태의 **finite field**도 구성하게 될 것이다.
 
-8. $\mathbb{Q}$의 원소 중, 기약형으로 표현했을 때 분모가 홀수인 모든 유리수의 집합 $R$을 생각하자. $R$은 $\mathbb{Q}$에서의 일반적인 덧셈과 곱셈 아래에서 **ring**을 이룬다. 이는 단위원을 갖는 **integral domain**이지만 **field**는 아니다. 왜냐하면 2의 역원인 $\frac{1}{2}$는 분모가 짝수이므로 $R$에 속하지 않기 때문이다.
+
+#### Example 8
+
+$\mathbb{Q}$의 원소 중, 기약형으로 표현했을 때 분모가 홀수인 모든 유리수의 집합 $R$을 생각하자. $R$은 $\mathbb{Q}$에서의 일반적인 덧셈과 곱셈 아래에서 **ring**을 이룬다. 이는 단위원을 갖는 **integral domain**이지만 **field**는 아니다. 왜냐하면 2의 역원인 $\frac{1}{2}$는 분모가 짝수이므로 $R$에 속하지 않기 때문이다.
 
 그렇다면 $R$의 어떤 원소가 $R$ 내에서 역원을 가지는가?
 
-9. 이번에는 $\mathbb{Q}$의 원소 중, 기약형으로 썼을 때 분모가 특정 소수 $p$로 나누어지지 않는 모든 유리수의 집합 $R$을 생각하자. 위와 마찬가지로 $R$은 일반적인 덧셈과 곱셈 아래에서 **ring**을 이루며, 단위원을 가지는 **integral domain**이지만 **field**는 아니다.
+
+#### Example 9
+
+이번에는 $\mathbb{Q}$의 원소 중, 기약형으로 썼을 때 분모가 특정 소수 $p$로 나누어지지 않는 모든 유리수의 집합 $R$을 생각하자. 위와 마찬가지로 $R$은 일반적인 덧셈과 곱셈 아래에서 **ring**을 이루며, 단위원을 가지는 **integral domain**이지만 **field**는 아니다.
 
 $R$의 어떤 원소가 역원을 가지는가?
 
@@ -153,10 +176,16 @@ $R$의 어떤 원소가 역원을 가지는가?
 
 우리는 **commutative ring**의 또 다른 예제를 소개한다. 이번에는 **미적분학**에서 유래한 것이다.
 
-10. $R$을 $[0,1]$ 구간에서 정의된 실수값 **연속 함수** 전체의 집합이라 하자. $f, g \in R$, $x \in [0,1]$에 대해
+
+#### Example 10
+$R$을 $[0,1]$ 구간에서 정의된 실수값 **연속 함수** 전체의 집합이라 하자. $f, g \in R$, $x \in [0,1]$에 대해
 
 $$
-(f + g)(x) = f(x) + g(x), \quad (f \cdot g)(x) = f(x)g(x)
+(f + g)(x) = f(x) + g(x)
+$$
+
+$$ 
+\quad (f \cdot g)(x) = f(x)g(x)
 $$
 
 로 연산을 정의하자. 미적분학의 결과에 따라 $f + g$, $f \cdot g$ 역시 연속함수이므로, 이 연산 아래에서 $R$은 **commutative ring**이다.
@@ -178,7 +207,7 @@ $$
 
 ---
 
-### Example 11
+#### Example 11
 
 $F$를 실수의 **field**라 하자. 그리고 $R$을 다음과 같은 모든 정사각 배열의 집합이라 하자:
 
@@ -304,7 +333,7 @@ $$
 
 ---
 
-### Example 12
+#### Example 12
 
 임의의 **ring** $R$에 대해, 다음과 같은 형태의 행렬 집합을 생각하자:
 
@@ -322,7 +351,7 @@ $$
 
 ---
 
-### Example 13 — The Quaternions
+#### Example 13 — The Quaternions
 
 고전적인 예시 중 하나인 실수 **quaternion**을 보자. 이는 해밀턴이 복소수의 **noncommutative**한 확장을 목표로 1843년에 도입하였다.
 
@@ -335,12 +364,7 @@ $$
 이들 사이의 등식과 덧셈은 다음과 같이 정의된다:
 
 * 등식: 두 quaternion이 같으려면, 대응하는 모든 계수가 같아야 한다.
-* 덧셈:
-
-$$
-(a_0 + a_1 i + a_2 j + a_3 k) + (b_0 + b_1 i + b_2 j + b_3 k)
-= (a_0 + b_0) + (a_1 + b_1)i + (a_2 + b_2)j + (a_3 + b_3)k
-$$
+* 덧셈: $(a_0 + a_1 i + a_2 j + a_3 k)$ $+ (b_0 + b_1 i + b_2 j + b_3 k)$ $= (a_0 + b_0) + (a_1 + b_1)i$ $+ (a_2 + b_2)j + (a_3 + b_3)k$
 
 이제 곱셈 규칙을 소개한다. 해밀턴은 1843년 10월 6일 더블린의 브루엄 다리(Brougham Bridge)에서 이를 발견하고 다리에 새겨넣었다. 기본 규칙은 다음과 같다:
 
@@ -352,12 +376,7 @@ $$
 ji = -k, \quad kj = -i, \quad ik = -j
 $$
 
-이들 규칙을 기반으로, 다음과 같이 두 quaternion의 곱을 정의한다:
-
-$$
-(a_0 + a_1 i + a_2 j + a_3 k)(b_0 + b_1 i + b_2 j + b_3 k)
-= c_0 + c_1 i + c_2 j + c_3 k
-$$
+이들 규칙을 기반으로, 다음과 같이 두 quaternion의 곱을 정의한다: $(a_0 + a_1 i + a_2 j + a_3 k)$ $(b_0 + b_1 i + b_2 j + b_3 k)$ $= c_0 + c_1 i + c_2 j + c_3 k$
 
 여기서
 
@@ -663,13 +682,24 @@ $$
 이 곱셈이 **well-defined**임을 보여야 한다. 즉,
 
 $$
-a + K = a' + K,\quad b + K = b' + K \Rightarrow ab + K = a'b' + K
+a + K = a' + K,\quad b + K = b' + K 
+$$
+
+$$
+\Rightarrow ab + K = a'b' + K
 $$
 
 이 성립함을 보여야 한다. $a - a' \in K$, $b - b' \in K$이므로,
 
 $$
-ab - a'b = (a - a')b \in K,\quad a'b - a'b' = a'(b - b') \in K
+ab - a'b = (a - a')b \in K
+$$
+
+$$
+a'b - a'b' = a'(b - b') \in K
+$$
+
+$$
 \Rightarrow ab - a'b' \in K
 $$
 
@@ -798,7 +828,8 @@ $$
 
 ### Examples
 
-1. $\mathbb{Z}$, 즉 정수의 **ring**을 고려하자. 정수 $n > 1$에 대해 $I_n = \{ kn \mid k \in \mathbb{Z} \}$는 $\mathbb{Z}$의 **ideal**이다.
+#### Example 1
+ $\mathbb{Z}$, 즉 정수의 **ring**을 고려하자. 정수 $n > 1$에 대해 $I_n = \{ kn \mid k \in \mathbb{Z} \}$는 $\mathbb{Z}$의 **ideal**이다.
    $\mathbb{Z}_n$은 모듈로 $n$의 정수 **ring**이고, 사상
 
 $$
@@ -815,16 +846,21 @@ $$
 
 ---
 
-2. $F$를 **field**라 하자. $F$의 **ideal**들은 무엇일까?
-   $I \ne (0)$이 $F$의 **ideal**이라 하자. $a \ne 0 \in I$라면,
-   $a^{-1}a = 1 \in I$, 그리고 $r \cdot 1 = r \in I$이므로, 결국 $I = F$가 된다.
-   따라서 **field**의 **ideal**은 오직 $(0)$과 $F$뿐이다.
+
+#### Example 2
+
+$F$를 **field**라 하자. $F$의 **ideal**들은 무엇일까?
+$I \ne (0)$이 $F$의 **ideal**이라 하자. $a \ne 0 \in I$라면,
+$a^{-1}a = 1 \in I$, 그리고 $r \cdot 1 = r \in I$이므로, 결국 $I = F$가 된다.
+따라서 **field**의 **ideal**은 오직 $(0)$과 $F$뿐이다.
 
 ---
 
-3. $R$을 기약형으로 나타냈을 때 분모가 홀수인 유리수 전체의 **ring**이라 하자.
-   $I$를 기약형에서 분자가 짝수인 유리수들의 집합이라 하면, 이는 $R$의 **ideal**이다.
-   다음 사상을 정의하자:
+
+#### Example 3
+$R$을 기약형으로 나타냈을 때 분모가 홀수인 유리수 전체의 **ring**이라 하자.
+$I$를 기약형에서 분자가 짝수인 유리수들의 집합이라 하면, 이는 $R$의 **ideal**이다.
+다음 사상을 정의하자:
 
 $$
 \varphi : R \to \mathbb{Z}_2,\quad \varphi(a/b) =
@@ -845,8 +881,10 @@ $$
 
 ---
 
-4. $R$을 기약형에서 분모가 고정된 소수 $p$로 나누어지지 않는 유리수들의 집합이라 하자.
-   $I$를 기약형에서 분자가 $p$로 나누어지는 유리수들의 집합이라 하면, $I$는 $R$의 **ideal**이고,
+
+#### Example 4
+$R$을 기약형에서 분모가 고정된 소수 $p$로 나누어지지 않는 유리수들의 집합이라 하자.
+$I$를 기약형에서 분자가 $p$로 나누어지는 유리수들의 집합이라 하면, $I$는 $R$의 **ideal**이고,
 
 $$
 R/I \cong \mathbb{Z}_p
@@ -856,8 +894,10 @@ $$
 
 ---
 
-5. $R$을 닫힌 구간 $[0,1]$에서 정의되는 실수값 연속함수들의 집합이라 하자.
-   $f, g \in R$, $x \in [0,1]$일 때,
+
+#### Example 5
+$R$을 닫힌 구간 $[0,1]$에서 정의되는 실수값 연속함수들의 집합이라 하자.
+$f, g \in R$, $x \in [0,1]$일 때,
 
 $$
 (f + g)(x) = f(x) + g(x), \quad (fg)(x) = f(x)g(x)
@@ -901,7 +941,9 @@ Theorem 4.3.3에 의해 $R/I \cong \mathbb{R}$.
 
 ---
 
-6. $R$을 정수 계수의 quaternion이라 하자. 즉,
+
+#### Example 6
+$R$을 정수 계수의 quaternion이라 하자. 즉,
 
 $$
 R = \{ a_0 + a_1 i + a_2 j + a_3 k \mid a_0, a_1, a_2, a_3 \in \mathbb{Z} \}
@@ -918,7 +960,13 @@ $$
 
 ---
 
-7. $R = \left\{ \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} \mid a, b \in \mathbb{R} \right\}$라 하자.
+
+#### Example 7
+$R$이 다음과 같다고 하자.
+$$
+R = \left\{ \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} \mid a, b \in \mathbb{R} \right\}
+$$
+
    이는 $\mathbb{R}$ 위 $2 \times 2$ 행렬들 중 특정한 형태의 행렬로 구성된 **subring**이다.
 
 다음 집합을 정의하자:
@@ -949,6 +997,9 @@ $$
 \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} 
 = \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix}
 + \begin{pmatrix} 0 & b \\ 0 & 0 \end{pmatrix}
+$$
+
+$$
 \Rightarrow
 \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} + I
 = \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix} + I
@@ -977,6 +1028,9 @@ $$
 \begin{pmatrix} a & b \\ 0 & a \end{pmatrix}
 + \begin{pmatrix} c & d \\ 0 & c \end{pmatrix}
 = \begin{pmatrix} a + c & b + d \\ 0 & a + c \end{pmatrix}
+$$
+
+$$
 \Rightarrow \varphi(\text{합}) = a + c
 = \varphi(...) + \varphi(...)
 $$
@@ -987,6 +1041,9 @@ $$
 \begin{pmatrix} a & b \\ 0 & a \end{pmatrix}
 \begin{pmatrix} c & d \\ 0 & c \end{pmatrix}
 = \begin{pmatrix} ac & ad + bc \\ 0 & ac \end{pmatrix}
+$$
+
+$$
 \Rightarrow \varphi(\text{곱}) = ac = \varphi(...) \cdot \varphi(...)
 $$
 
@@ -999,7 +1056,12 @@ $$
 
 ---
 
-8. $R = \left\{ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} \mid a, b \in \mathbb{R} \right\}$라 하자.
+
+#### Example 8
+$R$이 다음과 같다고 하자.
+$$
+R = \left\{ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} \mid a, b \in \mathbb{R} \right\}
+$$
    사상 $\psi: R \to \mathbb{C}$를 다음과 같이 정의하자:
 
 $$
@@ -1011,7 +1073,9 @@ $$
 
 ---
 
-9. $R$을 단위원을 갖는 **commutative ring**이라 하고, $a \in R$라 하자.
+
+#### Example 9
+$R$을 단위원을 갖는 **commutative ring**이라 하고, $a \in R$라 하자.
 
 $$
 (a) = \{ ra \mid r \in R \}
