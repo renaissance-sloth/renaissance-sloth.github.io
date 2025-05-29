@@ -1,5 +1,5 @@
 ---
-title: "친숙한 것들과 덜 친숙한 것들"
+title: "Things Familiar and Less Familiar"
 excerpt: "책 기준 1장 내용"
 tags: math mathematics abstract algebra 
 header:

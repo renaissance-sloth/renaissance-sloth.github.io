@@ -1,5 +1,5 @@
 ---
-title: "THE SYMMETRIC GROUP"
+title: "Symmetric Group"
 excerpt: "책 기준 3장 내용"
 tags: math mathematics abstract algebra 
 header:
