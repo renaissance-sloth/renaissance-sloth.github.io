@@ -8,7 +8,7 @@
             {%- assign tag_list=tag_list | push: post -%}
         {%- endif -%}
     {%- endfor -%}
-    {%- if tag_list.size > 0 -%}
+    {%- if tag_list.size > 1 -%}
         {%- assign corrected_tag=corrected_tag | push: tag_list -%}
         {%- assign corrected_tags=corrected_tags | push: corrected_tag -%}
     {%- endif -%}
