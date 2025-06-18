@@ -2,7 +2,7 @@
 title: "LaTeX 수학 기호"
 excerpt: "LaTeX의 수학 기호"
 
-tags: latex math mathematics
+tags: latex math
 header:
   teaser: https://images.ctfassets.net/nrgyaltdicpt/2RrzN8eVNXo7w6kd7CBNrs/55d916a167fa65d94441cc215558182c/overleaf-logo-primary.jpg
 ---

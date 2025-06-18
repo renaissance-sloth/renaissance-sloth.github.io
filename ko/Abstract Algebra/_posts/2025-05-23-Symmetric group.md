@@ -1,7 +1,7 @@
 ---
 title: "Symmetric Group"
 excerpt: "책 기준 3장 내용"
-tags: math mathematics abstract algebra 
+tags: math abstract algebra 
 header:
   teaser: https://media.wiley.com/product_data/coverImage300/92/04713687/0471368792.jpg
 ---

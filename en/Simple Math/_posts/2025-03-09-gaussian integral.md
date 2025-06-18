@@ -2,7 +2,7 @@
 title: "Gaussian integral"
 excerpt: The Gaussian integral is $\int_{-\infty}^{\infty}{e^{-x^{2}}}dx$. The answer is $\sqrt{\pi}$.
 
-tags: math mathematics
+tags: math
 header:
   teaser:
 ---

@@ -1,7 +1,7 @@
 ---
 title: "가우스 적분"
 excerpt: 가우스 적분(Gaussian integral)은 $\int_{-\infty}^{\infty}{e^{-x^{2}}}dx$이다. 답은 $\sqrt{\pi}$이다.
-tags: math mathematics
+tags: math
 header:
   teaser: 
 ---
