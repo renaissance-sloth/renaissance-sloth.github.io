@@ -1,7 +1,7 @@
 ---
 title: "중간고사 대비 공부"
 excerpt: "0-3장 - 요약 정리"
-tags: psychology human mind behavior midterm summary
+tags: psychology midterm summary
 header:
   teaser: https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail-product-api/A00077021/100209435/111776127/main/9791162263631_L.jpg
 ---
