@@ -1,5 +1,5 @@
 ---
-title: "중간고사 대비 공부"
+title: "인마행 중간고사 대비 공부"
 excerpt: "0-3장 - 요약 정리"
 tags: psychology midterm summary
 header:

@@ -1,5 +1,5 @@
 ---
-title: "기말고사 대비 공부"
+title: "인마행 기말고사 대비 공부"
 excerpt: "6-8장 - 요약 정리"
 tags: psychology final summary
 header:
