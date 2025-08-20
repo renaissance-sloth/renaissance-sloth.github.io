@@ -3,6 +3,10 @@
 # English (default)
 # -----------------
 en: &DEFAULT_EN
+
+  understand                 : "There may be inaccurate or incomplete information, so please point it out in the comments."
+  total_posts                : "Total posts"
+
   skip_links                 : "Skip links"
   skip_primary_nav           : "Skip to primary navigation"
   skip_content               : "Skip to content"
@@ -594,6 +598,10 @@ ne-NP:
 # Korean
 # ------
 ko: &DEFAULT_KO
+
+  understand                 : "어설프거나 틀린 내용이 있을 수 있으니 댓글로 지적해주시면 감사하겠습니다."
+  total_posts                : "전체 글"
+
   skip_links                 :
   skip_primary_nav           :
   skip_content               :

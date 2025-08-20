@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : "배움과 시행착오의 기록" # site tagline that appears below site title in masthead
 name                     : "Jeong-gyuKim" #"Your Name"
 description              : "A technology blog focused on development, learning, and personal growth." #"An amazing website."
-url                      : "https://renaissance-sloth.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://renaissance-sloth.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "renaissance-sloth/renaissance-sloth.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/favicon.ico/android-icon-192x192.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -68,11 +68,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : true # true, false (default)
+search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
-  search_within_pages    : true # true, false (default)
+  search_within_pages    : # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -82,9 +82,9 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : nTJDsEB-_Jdm_WxeBwquM1VziW-y4O88mSi9_2tHF74
 bing_site_verification   :
-naver_site_verification  :
+naver_site_verification  : 2b6e6ad889178f9ff9703817c7f75fdfb2b800f2
 yandex_site_verification :
 baidu_site_verification  :
 
@@ -105,9 +105,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-75D86M89G6"
     anonymize_ip         : # true, false (default)
 
 
@@ -124,7 +124,7 @@ author:
       # url: "mailto:slothrant@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://renaissance-sloth.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -136,7 +136,13 @@ author:
       url: "https://github.com/renaissance-sloth"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/renaissance_sloth"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/renaissance-sloth-b925b4352/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-square"
+      url: "https://www.youtube.com/@Renaissance-Sloth"
 
 # Site Footer
 footer:
@@ -158,7 +164,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://www.instagram.com/renaissance_sloth"
 
 
 # Reading Files
@@ -229,8 +235,8 @@ sass:
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-
 # Pagination with jekyll-paginate
+custom_pagination: true
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 
@@ -319,8 +325,9 @@ defaults:
   - scope:
       path: ""
     values:
-      language: "en"
+      language: "ko"
       author_profile: true
+      # sidebar_main: true
       toc_sticky: true
   # _posts
   - scope:
@@ -335,11 +342,3 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
-  - scope:
-      path: "ko"
-    values:
-      language: "ko"
-  - scope:
-      path: "en"
-    values:
-      language: "en"

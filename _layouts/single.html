@@ -13,9 +13,7 @@ layout: default
   {% assign breadcrumbs_enabled = page.breadcrumbs %}
 {% endif %}
 {% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+  {% include breadcrumbs.html %}
 {% endif %}
 
 <div id="main" role="main">
@@ -48,13 +46,14 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+        {{ site.data.ui-text[site.locale].understand | default: "" }}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
       <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% if site.data.ui-text[site.locale].meta_label | default: "" %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label | default: "" }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
         {% include page__date.html %}
@@ -79,7 +78,14 @@ layout: default
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
-    {% include page__related.html posts=site.related_posts %}
+    {% if jekyll.environment == 'production' %}
+      {% include related_posts %}
+      {% include page__related.html posts=related_posts %}
+    {% else %}
+      <p>
+        Related posts are configured, but are disabled in non-production environments.
+      </p>
+    {% endif %}
   {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
   {% elsif page.id and page.related %}
     {% include page__related.html posts=site.posts %}
