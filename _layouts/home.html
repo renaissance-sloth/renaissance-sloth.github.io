@@ -6,20 +6,17 @@ layout: archive
 
 <h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h2>
 
-{% if site.custom_pagination %}
-  {% include custom-pagination.html %}
+{% if paginator %}
+  {% assign first_post_num=paginator.page | times: paginator.per_page | minus: paginator.per_page %}
+  {% assign posts = site.posts | slice: first_post_num, paginator.per_page %}
 {% else %}
-  {% if paginator %}
-    {% assign first_post_num=paginator.page | times: paginator.per_page | minus: paginator.per_page %}
-    {% assign posts = site.posts | slice: first_post_num, paginator.per_page %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-  {% assign entries_layout = page.entries_layout | default: 'list' %}
-  <div class="entries-{{ entries_layout }}">
-    {% include documents-collection.html entries=posts type=entries_layout %}
-  </div>
-
-  {% include paginator.html %}
+  {% assign posts = site.posts %}
 {% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %}
+
