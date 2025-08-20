@@ -1,6 +1,7 @@
 ---
 title: "첫번째 포스트"
-tags: 포스트
+excerpt: 
+tags: post
 header:
   teaser: 
 ---
@@ -18,4 +19,4 @@ console.log('hello world!');
 
 이 문서의 title은 '{{ page.title }}' 이다.
 
-![text](https://picsum.photos/200)
+![text](/assets/favicon.ico/android-icon-192x192.png)
