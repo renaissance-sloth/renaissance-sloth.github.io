@@ -52,9 +52,7 @@ layout: default
       </section>
 
       <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label | default: "" %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label | default: "" }}</h4>
-        {% endif %}
+        <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label | default: "" }}</h4>
         {% include page__taxonomy.html %}
         {% include page__date.html %}
       </footer>
