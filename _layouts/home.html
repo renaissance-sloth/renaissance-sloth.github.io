@@ -11,9 +11,9 @@ layout: archive
 {% else %}
   {% if paginator %}
     {% assign first_post_num=paginator.page | times: paginator.per_page | minus: paginator.per_page %}
-    {% assign posts=site.posts | where:"language", site.locale | slice: first_post_num, paginator.per_page %}
+    {% assign posts = site.posts | slice: first_post_num, paginator.per_page %}
   {% else %}
-    {% assign posts = site.posts | where:"language", site.locale %}
+    {% assign posts = site.posts %}
   {% endif %}
 
   {% assign entries_layout = page.entries_layout | default: 'list' %}
