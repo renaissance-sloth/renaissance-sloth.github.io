@@ -15,11 +15,11 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en" #"ko"
+locale                   : "ko" #"ko"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Renaissance sloth" # "Site Title"
+title                    : "르네상스 나무늘보" # "Site Title"
 title_separator          : "-"
-subtitle                 : "A record of learning and trial and error" # site tagline that appears below site title in masthead
+subtitle                 : "배움과 시행착오의 기록" # site tagline that appears below site title in masthead
 name                     : "Jeong-gyuKim" #"Your Name"
 description              : "A technology blog focused on development, learning, and personal growth." #"An amazing website."
 url                      : "https://renaissance-sloth.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Sloth"
   avatar           : "/assets/img/author_100x100.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Let's enjoy the process of growing through trial and error together!"
+  bio              : "시행착오를 겪으며 성장하는 과정, 같이 즐겨봐요!"
   location         : "Gwangju, South Korea"
   email            : "slothrant@gmail.com"
   links:
