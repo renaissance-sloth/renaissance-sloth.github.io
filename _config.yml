@@ -340,3 +340,9 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
+  # assets
+  - scope:
+      path: "assets"
+    values:
+      sitemap:
+        exclude: true

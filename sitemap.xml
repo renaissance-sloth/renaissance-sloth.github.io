@@ -6,6 +6,41 @@ layout: null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        
+    {%- for page in site.pages -%}
+    {%- assign url = page.url | remove_first: site.baseurl | remove_first: '/' | split: '' | first -%}
+    {%- assign URL = url | capitalize -%}
+    {%- if URL != url -%}
+    
+    {%- assign url = page.url | split: '/' | last | split: '.' | last -%}
+    {%- if url != 'xml' -%}
+
+    {%- if page.sitemap.exclude != true -%}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        {%- if page.lastmod == null -%}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {%- else -%}
+        <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
+        {%- endif -%}
+
+        {%- if page.sitemap.changefreq == null -%}
+        <changefreq>daily</changefreq>
+        {%- else -%}
+        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+        {%- endif -%}
+
+        {%- if page.sitemap.priority == null -%}
+        <priority>0.8</priority>
+        {%- else -%}
+        <priority>{{ page.sitemap.priority }}</priority>
+        {%- endif -%}
+    </url>
+    {%- endif -%}
+    {%- endif -%}
+    {%- endif -%}
+    {%- endfor -%}
+
     {%- for post in site.posts -%}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
