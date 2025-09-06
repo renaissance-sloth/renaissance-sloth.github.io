@@ -1,7 +1,7 @@
 ---
 title: "현대대수 주요개념 총정리"
 excerpt: 
-tags: math abstract algebra concept
+tags: math abstract-algebra concept
 header:
   teaser: https://media.wiley.com/product_data/coverImage300/92/04713687/0471368792.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 title: "초기 근대 서양사 퀴즈 요약"
 excerpt: "초기 근대 서양사"
-tags: early modern western history quiz summary
+tags: early-modern-western-history quiz summary
 header:
   teaser: 
 ---
