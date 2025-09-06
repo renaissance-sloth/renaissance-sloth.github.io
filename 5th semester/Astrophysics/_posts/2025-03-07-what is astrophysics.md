@@ -3,7 +3,7 @@ title: "천체물리 소개"
 excerpt: 
 tags: physics Astrophysics intro
 header:
-  teaser: https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9781108422161.jpg
+  teaser: https://drive.google.com/thumbnail?id=1k2yXbh5v3b7wDsA7vafxprMZYhL5WdM-&sz=w1000
 ---
 
 # 천문학이란?

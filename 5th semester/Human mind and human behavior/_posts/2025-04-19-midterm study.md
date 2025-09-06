@@ -3,7 +3,7 @@ title: "인마행 중간고사 대비 공부"
 excerpt: "0-3장 - 요약 정리"
 tags: psychology midterm summary
 header:
-  teaser: https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail-product-api/A00077021/100209435/111776127/main/9791162263631_L.jpg
+  teaser: https://drive.google.com/thumbnail?id=1dBJURYsjHre0648F4SNCvMqqUgANCfUk&sz=w1000
 ---
 
 # 0~3장 요약

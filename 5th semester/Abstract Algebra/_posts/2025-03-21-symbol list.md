@@ -3,7 +3,7 @@ title: "현대대수 기호 목록"
 excerpt: 
 tags: math abstract-algebra symbol
 header:
-  teaser: https://media.wiley.com/product_data/coverImage300/92/04713687/0471368792.jpg
+  teaser: https://drive.google.com/thumbnail?id=1uhNc8ro4rr31LsFmXllQU5ADHh9scufz&sz=w1000
 ---
 
 현대대수학을 본격적으로 배우기 전에 기호들을 정의하고 시작하자.

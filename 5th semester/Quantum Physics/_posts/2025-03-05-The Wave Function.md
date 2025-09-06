@@ -3,7 +3,7 @@ title: "파동 함수"
 excerpt: 
 tags: physics quantum
 header:
-  teaser: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQqoGDngbpKU_7jpFv4thAwH03rpQ8HZk7VXCkdFrS0IHbkrjgE
+  teaser: https://drive.google.com/thumbnail?id=1Qm_zarRZ2x-0ElOGprphzt1zN4FiPnS6&sz=w1000
 ---
 # 파동 함수
 

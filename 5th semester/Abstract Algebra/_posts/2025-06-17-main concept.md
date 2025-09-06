@@ -3,7 +3,7 @@ title: "현대대수 주요개념 총정리"
 excerpt: 
 tags: math abstract-algebra concept
 header:
-  teaser: https://media.wiley.com/product_data/coverImage300/92/04713687/0471368792.jpg
+  teaser: https://drive.google.com/thumbnail?id=1uhNc8ro4rr31LsFmXllQU5ADHh9scufz&sz=w1000
 ---
 
 주요 개념을 총정리해 드리겠습니다. 내용은 집합론, 군론, 환론, 체론 순으로 구성되어 있습니다.
