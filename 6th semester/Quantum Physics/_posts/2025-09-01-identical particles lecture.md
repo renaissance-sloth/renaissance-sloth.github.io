@@ -62,6 +62,7 @@ $\psi_{\pm}(\mathbf{r}_1, \mathbf{r}_2) = A [\psi_a(\mathbf{r}_1) \psi_b(\mathbf
 *   **반정수 스핀 (Half-integer spin)** $\to$ **페르미온 (fermions)**: **반대칭 (Anti-symm)**
 
 $\psi_-(\mathbf{r}_1, \mathbf{r}_2) = A [\psi_a(\mathbf{r}_1) \psi_a(\mathbf{r}_2) - \psi_a(\mathbf{r}_1) \psi_a(\mathbf{r}_2)] = 0$
+
 $\therefore$ 두 페르미온은 동일한 상태를 차지할 수 없다 (**파울리 배타 원리 (Pauli exclusion principle)**).
 
 ***
@@ -71,15 +72,20 @@ $\therefore$ 두 페르미온은 동일한 상태를 차지할 수 없다 (**파
 교환 연산자 (Exchange operator): $P f(\mathbf{r}_1, \mathbf{r}_2) = f(\mathbf{r}_2, \mathbf{r}_1)$
 
 $P^2 f(\mathbf{r}_1, \mathbf{r}_2) = P f(\mathbf{r}_2, \mathbf{r}_1) = f(\mathbf{r}_1, \mathbf{r}_2)$
+
 $\forall f \implies P^2 = 1$
 
 $g$가 고유값 $\lambda$를 갖는 $P$의 고유함수라고 하자: $P g = \lambda g$
+
 $\to P^2 g = \lambda P g = \lambda^2 g = g$
+
 $\therefore \lambda = \pm 1$
 
 두 동일 입자에 대해:
 $P [H(\mathbf{r}_1, \mathbf{r}_2) \Psi(\mathbf{r}_1, \mathbf{r}_2)] = H(\mathbf{r}_2, \mathbf{r}_1) \Psi(\mathbf{r}_2, \mathbf{r}_1) = H(\mathbf{r}_1, \mathbf{r}_2) P \Psi(\mathbf{r}_1, \mathbf{r}_2)$
+
 $\to PH = HP$ 또는 $[P, H] = 0$
+
 $\forall \Psi$
 
 $\therefore H$와 $P$는 동일한 고유상태를 공유할 **수 있으며 (can), 반드시 공유해야 한다 (MUST)**.
@@ -93,20 +99,26 @@ $\therefore H$와 $P$는 동일한 고유상태를 공유할 **수 있으며 (ca
 
 1-입자 상태는 다음과 같다:
 $\psi_n(x) = \sqrt{\frac{2}{a}} \sin\left(\frac{n\pi}{a}x\right)$
+
 $E_n = n^2 \frac{\hbar^2 \pi^2}{2ma^2} = n^2 K$
 
 **구별 가능한 입자 (Distinguishable particles):**
 $\psi_{n_1, n_2}(x_1, x_2) = \psi_{n_1}(x_1) \psi_{n_2}(x_2)$
+
 $E_{n_1, n_2} = (n_1^2 + n_2^2) K$
 
 예시, **바닥 상태 (Ground state):**
 $\psi_{11}(x_1, x_2) = \frac{2}{a} \sin\left(\frac{\pi}{a}x_1\right) \sin\left(\frac{\pi}{a}x_2\right)$
+
 $E_{11} = 2K$
 
 **첫 번째 들뜬 상태 (1st excited state):**
 $\psi_{12}(x_1, x_2) = \frac{2}{a} \sin\left(\frac{\pi}{a}x_1\right) \sin\left(\frac{2\pi}{a}x_2\right)$
+
 $E_{12} = 5K$
+
 $\psi_{21}(x_1, x_2) = \frac{2}{a} \sin\left(\frac{2\pi}{a}x_1\right) \sin\left(\frac{\pi}{a}x_2\right)$
+
 $E_{21} = 5K$
 **이중 축퇴된 (Doubly degenerate)**
 
@@ -117,16 +129,19 @@ $E_{21} = 5K$
 **보손 (Bosons):**
 **바닥 상태 (Ground state):**
 $\psi_0(x_1, x_2) = \frac{2}{a} \sin\left(\frac{\pi}{a}x_1\right) \sin\left(\frac{\pi}{a}x_2\right)$
+
 $E_0 = 2K$
 
 **첫 번째 들뜬 상태 (1st excited state):**
 $\psi_1(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \frac{2}{a} \sin\left(\frac{\pi}{a}x_1\right) \sin\left(\frac{2\pi}{a}x_2\right) + \frac{2}{a} \sin\left(\frac{2\pi}{a}x_1\right) \sin\left(\frac{\pi}{a}x_2\right) \right]$
+
 $E_1 = 5K$
 **비축퇴된 (Nondegenerate)**
 
 **페르미온 (Fermions):**
 **바닥 상태 (Ground state):**
 $\psi_0(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \frac{2}{a} \sin\left(\frac{\pi}{a}x_1\right) \sin\left(\frac{2\pi}{a}x_2\right) - \frac{2}{a} \sin\left(\frac{2\pi}{a}x_1\right) \sin\left(\frac{\pi}{a}x_2\right) \right]$
+
 $E_0 = 5K$
 
 ***
@@ -151,13 +166,15 @@ $\psi_D(x_1, x_2) = \psi_a(x_1) \psi_b(x_2)$
 
 $\langle (x_1 - x_2)^2 \rangle = \langle x_1^2 \rangle + \langle x_2^2 \rangle - 2 \langle x_1 x_2 \rangle$
 
-$\langle x_1^2 \rangle_D = \int dx_1 \int dx_2 \psi_D^*(x_1, x_2) x_1^2 \psi_D(x_1, x_2)$
-$= \int dx_1 \psi_a^*(x_1) x_1^2 \psi_a(x_1) \int dx_2 \psi_b^*(x_2) \psi_b(x_2) = \langle x^2 \rangle_a$ (여기서 $\psi_a, \psi_b$는 정규화되어 있다)
+$\langle x_1^2 \rangle_D = \int dx_1 \int dx_2 \psi_D^* (x_1, x_2) x_1^2 \psi_D(x_1, x_2)$
+
+$= \int dx_1 \psi_a^* (x_1) x_1^2 \psi_a(x_1) \int dx_2 \psi_b^* (x_2) \psi_b(x_2) = \langle x^2 \rangle_a$ (여기서 $\psi_a, \psi_b$는 정규화되어 있다)
 
 유사하게 (Similarly), $\langle x_2^2 \rangle_D = \langle x^2 \rangle_b$
 
-$\langle x_1 x_2 \rangle_D = \int dx_1 \int dx_2 \psi_D^*(x_1, x_2) x_1 x_2 \psi_D(x_1, x_2)$
-$= \int dx_1 \psi_a^*(x_1) x_1 \psi_a(x_1) \int dx_2 \psi_b^*(x_2) x_2 \psi_b(x_2) = \langle x \rangle_a \langle x \rangle_b$
+$\langle x_1 x_2 \rangle_D = \int dx_1 \int dx_2 \psi_D^* (x_1, x_2) x_1 x_2 \psi_D(x_1, x_2)$
+
+$= \int dx_1 \psi_a^* (x_1) x_1 \psi_a(x_1) \int dx_2 \psi_b^* (x_2) x_2 \psi_b(x_2) = \langle x \rangle_a \langle x \rangle_b$
 
 $\therefore \langle (x_1 - x_2)^2 \rangle_D = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b$
 
@@ -166,26 +183,37 @@ $\therefore \langle (x_1 - x_2)^2 \rangle_D = \langle x^2 \rangle_a + \langle x^
 ### **동일 입자 (Identical Particles)**
 
 $\psi_{\pm}(x_1, x_2) = \frac{1}{\sqrt{2}}[\psi_a(x_1)\psi_b(x_2) \pm \psi_b(x_1)\psi_a(x_2)]$
+
 $\langle (x_1 - x_2)^2 \rangle = \langle x_1^2 \rangle + \langle x_2^2 \rangle - 2 \langle x_1 x_2 \rangle$
 
-$\|\psi_{\pm}(x_1, x_2)\|^2 = \frac{1}{2} [ \|\psi_a(x_1)\psi_b(x_2)\|^2 + \|\psi_b(x_1)\psi_a(x_2)\|^2 \pm \psi_a^*(x_1)\psi_b^*(x_2)\psi_b(x_1)\psi_a(x_2) \pm \psi_b^*(x_1)\psi_a^*(x_2)\psi_a(x_1)\psi_b(x_2) ]$
+$$\begin{aligned}
+|\psi_{\pm}(x_1, x_2)|^2 &= \frac{1}{2} [ |\psi_a(x_1)\psi_b(x_2)|^2 + |\psi_b(x_1)\psi_a(x_2)|^2 ] \\ &\pm \frac{1}{2} [ \psi_a^* (x_1)\psi_b^* (x_2)\psi_b(x_1)\psi_a(x_2) \pm \psi_b^* (x_1)\psi_a^* (x_2)\psi_a(x_1)\psi_b(x_2) ]
+\end{aligned}$$　
 
 $\langle x_1^2 \rangle_{\pm} = \int dx_1 \int dx_2 \|\psi_{\pm}(x_1, x_2)\|^2 x_1^2 = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$ ($\psi_a, \psi_b$는 직교정규)
+
 유사하게 (Similarly), $\langle x_2^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
 
 $\langle x_1 x_2 \rangle_{\pm} = \int dx_1 \int dx_2 \|\psi_{\pm}(x_1, x_2)\|^2 x_1 x_2$
-$= \frac{1}{2} [\langle x \rangle_a \langle x \rangle_b + \langle x \rangle_b \langle x \rangle_a \pm \langle x \rangle_{ab} \pm \langle x \rangle_{ba} ] = \langle x \rangle_a \langle x \rangle_b \pm \langle x \rangle_{ab} \pm \langle x \rangle_{ba}$
-여기서 $\langle x \rangle_{ab} = \int dx \psi_a^*(x) x \psi_b(x)$
+
+$= \frac{1}{2} [\langle x \rangle_a \langle x \rangle_b + \langle x \rangle_b \langle x \rangle_a] \pm \frac{1}{2} [ \langle x \rangle_{ab}\langle x \rangle_{ba} + \langle x \rangle_{ba}\langle x \rangle_{ab} ] = \langle x \rangle_a \langle x \rangle_b \pm \langle x \rangle_{ab} \langle x \rangle_{ba}$
+
+여기서 $\langle x \rangle_{ab} = \int dx \psi_a^* (x) x \psi_b(x)$
 
 ***
 
-$\langle x_1^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
+$\langle x_1^2 \rangle_{\pm} = \langle x_2^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
+
+$\langle (x_1 - x_2)^2 \rangle = \langle x^2 \rangle + \langle x^2 \rangle - 2 \langle x_1 x_2 \rangle$
+
 $\langle x_1 x_2 \rangle_{\pm} = \langle x \rangle_a \langle x \rangle_b \pm \langle x \rangle_{ab} \langle x \rangle_{ba}$
 
-$\to \langle (x_1 - x_2)^2 \rangle_{\pm} = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b \mp 2 \langle x \rangle_{ab} \langle x \rangle_{ba}$
-$= \langle (x_1 - x_2)^2 \rangle_D \mp 2 \|\langle x \rangle_{ab}\|^2$
 
-또는 (or) $\langle (\Delta x)^2 \rangle_{\pm} = \langle (\Delta x)^2 \rangle_D \mp 2 \|\langle x \rangle_{ab}\|^2$
+$\to \langle (x_1 - x_2)^2 \rangle_{\pm} = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b \mp 2 \langle x \rangle_{ab} \langle x \rangle_{ba}$
+
+$= \langle (x_1 - x_2)^2 \rangle_D \mp 2 \langle x \rangle_{ab} \langle x \rangle_{ba} $
+
+또는 $\langle (\Delta x)^2 \rangle_{\pm} = \langle (\Delta x)^2 \rangle_D \mp 2 \|\langle x \rangle_{ab}\|^2$
 
 $\therefore$ **보손은 구별 가능한 경우보다 더 가깝게 (closer) 위치하며, 페르미온은 더 멀리 (further apart) 위치한다.**
 
@@ -198,25 +226,35 @@ $\to$ **효과적인 교환력 (effective exchange force)은 보손에 대해서
 ### **간소화된 유도 (Simplified Derivation)**
 
 $\langle A \rangle = \langle \psi \| A \| \psi \rangle$
+
 $\langle (x_1 - x_2)^2 \rangle = \langle x_1^2 \rangle + \langle x_2^2 \rangle - 2 \langle x_1 x_2 \rangle$
 
-$\psi_D(x_1, x_2) = \psi_a(x_1) \psi_b(x_2) \sim \|a b \rangle$
+$\psi_D(x_1, x_2) = \psi_a(x_1) \psi_b(x_2) \sim \|\psi_D \rangle = \|a b \rangle$
+
 $\langle (x_1 - x_2)^2 \rangle_D = \langle ab \| x_1^2 \| ab \rangle + \langle ab \| x_2^2 \| ab \rangle - 2 \langle ab \| x_1 x_2 \| ab \rangle = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b$
 
-$\psi_{\pm}(x_1, x_2) = \frac{1}{\sqrt{2}}[\psi_a(x_1)\psi_b(x_2) \pm \psi_b(x_1)\psi_a(x_2)] \sim \frac{1}{\sqrt{2}}(\|ab\rangle \pm \|ba\rangle)$
+$\psi_{\pm}(x_1, x_2) = \frac{1}{\sqrt{2}}[\psi_a(x_1)\psi_b(x_2) \pm \psi_b(x_1)\psi_a(x_2)] \sim \|\psi_\pm \rangle = \frac{1}{\sqrt{2}}(\|ab\rangle \pm \|ba\rangle)$
+
 $\langle A \rangle_{\pm} = \frac{1}{2} [\langle ab \| A \| ab \rangle + \langle ba \| A \| ba \rangle \pm \langle ab \| A \| ba \rangle \pm \langle ba \| A \| ab \rangle ]$
 
 $\langle x_1^2 \rangle_{\pm} = \frac{1}{2} [\langle ab \| x_1^2 \| ab \rangle + \langle ba \| x_1^2 \| ba \rangle \pm \langle ab \| x_1^2 \| ba \rangle \pm \langle ba \| x_1^2 \| ab \rangle ]$
-$= \frac{1}{2} [\langle x^2 \rangle_a + \langle x^2 \rangle_b \pm \langle x^2 \rangle_{ab} \pm \langle x^2 \rangle_{ba} ] = \frac{1}{2} [\langle x^2 \rangle_a + \langle x^2 \rangle_b ]$ (만약 $\langle ab \rangle = 0$)
+
+$= \frac{1}{2} [\langle x^2 \rangle_a + \langle x^2 \rangle_b \pm \langle x^2 \rangle_{ab} \langle b \| a \rangle \pm \langle x^2 \rangle_{ba} \langle a \| b \rangle ] = \frac{1}{2} [\langle x^2 \rangle_a + \langle x^2 \rangle_b ]$ 
+
+만약 $\langle a \| b \rangle = 0$면, 
 여기서 $\langle A \rangle_{ab} \equiv \langle a \| A \| b \rangle$
 
 ***
 
+$\langle x_1^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
+
 유사하게 (Similarly), $\langle x_2^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
+
 $\langle x_1 x_2 \rangle_{\pm} = \frac{1}{2} [\langle x \rangle_a \langle x \rangle_b + \langle x \rangle_b \langle x \rangle_a \pm \langle x \rangle_{ab} \langle x \rangle_{ba} \pm \langle x \rangle_{ba} \langle x \rangle_{ab} ] = \langle x \rangle_a \langle x \rangle_b \pm \langle x \rangle_{ab} \langle x \rangle_{ba}$
 
 $\to \langle (x_1 - x_2)^2 \rangle_{\pm} = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b \mp 2 \langle x \rangle_{ab} \langle x \rangle_{ba}$
-$= \langle (x_1 - x_2)^2 \rangle_D \mp 2 \|\langle x \rangle_{ab}\|^2$
+
+$= \langle (x_1 - x_2)^2 \rangle_D \mp 2 \langle x \rangle_{ab} \langle x \rangle_{ba}$
 
 또는 (or) $\langle (\Delta x)^2 \rangle_{\pm} = \langle (\Delta x)^2 \rangle_D \mp 2 \|\langle x \rangle_{ab}\|^2$
 
