@@ -122,9 +122,9 @@ $\psi_{21}(x_1, x_2) = \frac{2}{a} \sin\left(\frac{2\pi}{a}x_1\right) \sin\left(
 $E_{21} = 5K$
 **이중 축퇴된 (Doubly degenerate)**
 
-***
-
 ($\psi_n(x) = \sqrt{\frac{2}{a}} \sin\left(\frac{n\pi}{a}x\right)$, $E_n = n^2 K$)
+
+***
 
 **보손 (Bosons):**
 **바닥 상태 (Ground state):**
@@ -137,6 +137,8 @@ $\psi_1(x_1, x_2) = \frac{1}{\sqrt{2}} \left[ \frac{2}{a} \sin\left(\frac{\pi}{a
 
 $E_1 = 5K$
 **비축퇴된 (Nondegenerate)**
+
+***
 
 **페르미온 (Fermions):**
 **바닥 상태 (Ground state):**
@@ -187,7 +189,7 @@ $\psi_{\pm}(x_1, x_2) = \frac{1}{\sqrt{2}}[\psi_a(x_1)\psi_b(x_2) \pm \psi_b(x_1
 $\langle (x_1 - x_2)^2 \rangle = \langle x_1^2 \rangle + \langle x_2^2 \rangle - 2 \langle x_1 x_2 \rangle$
 
 $$\begin{aligned}
-|\psi_{\pm}(x_1, x_2)|^2 &= \frac{1}{2} [ |\psi_a(x_1)\psi_b(x_2)|^2 + |\psi_b(x_1)\psi_a(x_2)|^2 ] \\ &\pm \frac{1}{2} [ \psi_a^* (x_1)\psi_b^* (x_2)\psi_b(x_1)\psi_a(x_2) \pm \psi_b^* (x_1)\psi_a^* (x_2)\psi_a(x_1)\psi_b(x_2) ]
+|\psi_{\pm}(x_1, x_2)|^2 &= \frac{1}{2} [ |\psi_a(x_1)\psi_b(x_2)|^2 + |\psi_b(x_1)\psi_a(x_2)|^2 ] \\ &\pm \frac{1}{2} [ \psi_a^* (x_1)\psi_b^* (x_2)\psi_b(x_1)\psi_a(x_2) + \psi_b^* (x_1)\psi_a^* (x_2)\psi_a(x_1)\psi_b(x_2) ]
 \end{aligned}$$　
 
 $\langle x_1^2 \rangle_{\pm} = \int dx_1 \int dx_2 \|\psi_{\pm}(x_1, x_2)\|^2 x_1^2 = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$ ($\psi_a, \psi_b$는 직교정규)
@@ -204,7 +206,7 @@ $= \frac{1}{2} [\langle x \rangle_a \langle x \rangle_b + \langle x \rangle_b \l
 
 $\langle x_1^2 \rangle_{\pm} = \langle x_2^2 \rangle_{\pm} = \frac{1}{2} [ \langle x^2 \rangle_a + \langle x^2 \rangle_b ]$
 
-$\langle (x_1 - x_2)^2 \rangle = \langle x^2 \rangle + \langle x^2 \rangle - 2 \langle x_1 x_2 \rangle$
+$\langle (x_1 - x_2)^2 \rangle = \langle x^2_1 \rangle + \langle x^2_2 \rangle - 2 \langle x_1 x_2 \rangle$
 
 $\langle x_1 x_2 \rangle_{\pm} = \langle x \rangle_a \langle x \rangle_b \pm \langle x \rangle_{ab} \langle x \rangle_{ba}$
 
