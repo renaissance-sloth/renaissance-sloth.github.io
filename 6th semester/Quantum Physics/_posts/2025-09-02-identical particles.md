@@ -3,7 +3,7 @@ title: "Identical particles"
 excerpt: "'양자물리 및 연습 II' 과목의 5단원 강의입니다."
 tags: syllabus physics quantum
 header:
-  teaser: https://drive.google.com/thumbnail?id=1Qm_zarrZ2x-0ElOGprphzt1zN4FiPnS6&sz=w1000
+  teaser: https://drive.google.com/thumbnail?id=1Qm_zarRZ2x-0ElOGprphzt1zN4FiPnS6&sz=w1000
 ---
 
 # 제5장 동일 입자 (Identical Particles)
