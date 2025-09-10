@@ -1,5 +1,5 @@
 ---
-title: "열역학 법칙"
+title: "열역학 1법칙"
 excerpt: "'열역학 및 통계물리' 과목의 이전 내용 복습입니다."
 tags: syllabus physics thermodynamics statistics
 header:
