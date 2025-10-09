@@ -77,9 +77,8 @@ layout: default
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     {% if jekyll.environment == 'production' %}
-      <!--{% include related_posts %}
-      {% include page__related.html posts=related_posts %}-->
-      {% include page__related.html posts=site.related_posts %}
+      {% include related_posts %}
+      {% include page__related.html posts=related_posts %}
     {% else %}
       <p>
         Related posts are configured, but are disabled in non-production environments.
