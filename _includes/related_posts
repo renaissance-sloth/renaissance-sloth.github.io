@@ -21,5 +21,5 @@
     {% endif %}
 {% endfor %}
 
-{% include array/insertion_sort arr=posts score=score reverse=true %}
+{% include array/insertion_sort.liquid arr=posts score=score reverse=true %}
 {% assign related_posts=return %}

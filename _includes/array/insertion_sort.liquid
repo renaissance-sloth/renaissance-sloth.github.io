@@ -17,14 +17,14 @@
       
       {%- assign temp1=array[i] -%}
       {%- assign temp2=array[i_1] -%}
-      {%- include array/edit arr=array index=i value=temp2 -%}
-      {%- include array/edit arr=return index=i_1 value=temp1 -%}
+      {%- include array/edit.liquid arr=array index=i value=temp2 -%}
+      {%- include array/edit.liquid arr=return index=i_1 value=temp1 -%}
       {%- assign array=return -%}
 
       {%- assign temp1=score[i] -%}
       {%- assign temp2=score[i_1] -%}
-      {%- include array/edit arr=score index=i value=temp2 -%}
-      {%- include array/edit arr=return index=i_1 value=temp1 -%}
+      {%- include array/edit.liquid arr=score index=i value=temp2 -%}
+      {%- include array/edit.liquid arr=return index=i_1 value=temp1 -%}
       {%- assign score=return -%}
 
       {%- assign i=i_1 -%}
