@@ -1,25 +1,75 @@
-{% assign related_posts="" | split:"," %}
-{% assign posts="" | split:"," %}
-{% assign score="" | split:"," %}
+{% assign K = 4 %} {%- comment -%} # 원하는 관련글 개수 # {%- endcomment -%}
+
+{% assign related_posts = "" | split: "," %}
+{% assign best_posts = "" | split: "," %}
+{% assign best_scores = "" | split: "," %}
 
 {% for post in site.posts %}
-    {% if post.url != page.url %}
-        {% assign commonCount = 0 %}
-        {% for category in post.categories %}
-            {% if page.categories contains category %}
-                {% assign commonCount = commonCount | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-        {% assign tags=post.tags | uniq %}
-        {% for tag in tags %}
-            {% if page.tags contains tag %}
-                {% assign commonCount = commonCount | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-        {% assign posts=posts | push: post %}
-        {% assign score=score | push: commonCount %}
+  {% if post.url != page.url %}
+    {% assign commonCount = 0 %}
+
+    {%- comment -%} 카테고리 겹침 {%- endcomment -%}
+    {% for category in post.categories %}
+      {% if page.categories contains category %}
+        {% assign commonCount = commonCount | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {%- comment -%} 태그 겹침 (중복 제거) {%- endcomment -%}
+    {% assign tags = post.tags | uniq %}
+    {% for tag in tags %}
+      {% if page.tags contains tag %}
+        {% assign commonCount = commonCount | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {%- comment -%}
+      1) 아직 K개 미만이면 무조건 삽입 대상
+      2) K개 꽉 찼으면, 현재 최소 점수(마지막 원소)보다 클 때만 삽입
+    {%- endcomment -%}
+    {% assign can_insert = false %}
+    {% if best_scores.size < K %}
+      {% assign can_insert = true %}
+    {% else %}
+      {% assign last_index = best_scores.size | minus: 1 %}
+      {% assign diff = commonCount | minus: best_scores[last_index] %}
+      {% if diff > 0 %}
+        {% assign can_insert = true %}
+      {% endif %}
     {% endif %}
+
+    {% if can_insert %}
+      {%- comment -%} 들어갈 위치 idx 찾기 (내림차순 유지) {%- endcomment -%}
+      {% assign idx = best_scores.size %}
+
+      {% if best_scores.size > 0 %}
+        {% assign last = best_scores.size | minus: 1 %}
+        {% for p in (0..last) %}
+          {% assign d = commonCount | minus: best_scores[p] %}
+          {% if d > 0 %}
+            {% assign idx = p %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {%- comment -%} best_scores에 삽입: before + [commonCount] + after {%- endcomment -%}
+      {% assign beforeS = best_scores | slice: 0, idx %}
+      {% assign afterS  = best_scores | slice: idx, best_scores.size %}
+      {% assign best_scores = beforeS | push: commonCount | concat: afterS %}
+
+      {%- comment -%} best_posts에 삽입: 동일 위치에 post 넣기 {%- endcomment -%}
+      {% assign beforeP = best_posts | slice: 0, idx %}
+      {% assign afterP  = best_posts | slice: idx, best_posts.size %}
+      {% assign best_posts = beforeP | push: post | concat: afterP %}
+
+      {%- comment -%} 길이가 K 넘으면 마지막 제거 {%- endcomment -%}
+      {% if best_scores.size > K %}
+        {% assign best_scores = best_scores | slice: 0, K %}
+        {% assign best_posts  = best_posts  | slice: 0, K %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
-{% include array/insertion_sort.liquid arr=posts score=score reverse=true %}
-{% assign related_posts=return %}
+{% assign related_posts = best_posts %}
