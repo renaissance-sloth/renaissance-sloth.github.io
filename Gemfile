@@ -14,7 +14,10 @@ gem "github-pages", group: :jekyll_plugins
 # To upgrade, run `bundle update`.
 
 gem "jekyll"
+gem "liquid-c"
 gem "minimal-mistakes-jekyll"
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem "faraday-retry", "~> 2.4"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
