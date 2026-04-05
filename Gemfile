@@ -24,7 +24,7 @@ gem "faraday-retry", "~> 2.4"
 #   gem "jekyll-sitemap"
 #   gem "jekyll-gist"
 #   gem "jekyll-feed"
-#   gem "jekyll-include-cache"
+gem "jekyll-include-cache"
 #
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
