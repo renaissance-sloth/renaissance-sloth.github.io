@@ -377,8 +377,8 @@ __밑줄 2개__
 ![Alt ​​text](/path/to/img.jpg)
 ![Alt ​​text](/path/to/img.jpg "Optional title")
 ```
-![text](/assets/favicon.ico/android-icon-192x192.png)
-![text](/assets/favicon.ico/android-icon-192x192.png "나무늘보 아이콘")
+![text](/assets/img/android-icon-192x192.png)
+![text](/assets/img/android-icon-192x192.png "나무늘보 아이콘")
 
 크기 조절 기능이 없으므로 ```<img width="" height=""></img>```를 사용하라.
 
@@ -391,8 +391,8 @@ __밑줄 2개__
 
 * 적용 예시:
 
-<img src="/assets/favicon.ico/android-icon-192x192.png" width="100px" height="100px" title="Set px(pixel) size" alt="나무늘보 아이콘"><br/>
-<img src="/assets/favicon.ico/android-icon-192x192.png" width="40%" height="30%" title="%(ratio) size setting" alt="나무늘보 아이콘">
+<img src="/assets/img/android-icon-192x192.png" width="100px" height="100px" title="Set px(pixel) size" alt="나무늘보 아이콘"><br/>
+<img src="/assets/img/android-icon-192x192.png" width="40%" height="30%" title="%(ratio) size setting" alt="나무늘보 아이콘">
 
 ## 2.9. 줄바꿈
 3개 이상의 공백(` `)을 남기면 줄이 바뀐다.
