@@ -35,3 +35,11 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* MathJax */
+.MathJax_Display, 
+mjx-container[display="true"] {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 10px 0;
+}
