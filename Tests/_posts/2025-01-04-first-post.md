@@ -19,4 +19,4 @@ console.log('hello world!');
 
 이 문서의 title은 '{{ page.title }}' 이다.
 
-![text](/assets/favicon.ico/android-icon-192x192.png)
+![text](/assets/img/android-icon-192x192.png)
